@@ -1,0 +1,47 @@
+[
+	{
+		ingredientPattern: "LNP,PLL,SMH",
+		ingredients: {
+			"S": { type: "item", code: "game:saw-*", isTool: true  },
+			"H": { type: "item", code: "game:hammer-*", isTool: true  },
+			"P": { type: "item", code: "game:plank-*", name: "wood" },
+			"M": { type: "item", code: "game:metalplate-copper", name: "copper" },
+			"L": { type: "item", code: "game:hide-pelt-large", name: "leather"},
+			"N": { type: "item", code: "game:metalnailsandstrips-copper", name: "nail", quantity:2},
+		},
+		name: "tyrannosaddle",
+		width: 3,
+		height: 3,
+		output: { type: "item", code: "ornithomimosauria:ornithowearable-saddle", "quantity": 1 }
+	},
+	{
+		ingredientPattern: "NLL,SLH,_M_",
+		ingredients: {
+			"S": { type: "item", code: "game:saw-*", isTool: true  },
+			"H": { type: "item", code: "game:hammer-*", isTool: true  },
+			"P": { type: "item", code: "game:plank-*", name: "wood" },
+			"M": { type: "item", code: "game:metalplate-copper", name: "copper" },
+			"L": { type: "item", code: "game:hide-pelt-large", name: "leather" },
+			"N": { type: "item", code: "game:metalnailsandstrips-copper", name: "nail", quantity:2},
+		},
+		name: "tyrannobridle",
+		width: 3,
+		height: 3,
+		output: { type: "item", code: "ornithomimosauria:ornithowearable-bridle1", "quantity": 1 }
+	},
+	{
+		ingredientPattern: "LLN,SLH,_M_",
+		ingredients: {
+			"S": { type: "item", code: "game:saw-*", isTool: true  },
+			"H": { type: "item", code: "game:hammer-*", isTool: true  },
+			"P": { type: "item", code: "game:plank-*", name: "wood" },
+			"M": { type: "item", code: "game:metalplate-copper", name: "copper" },
+			"L": { type: "item", code: "game:hide-pelt-large", name: "leather" },
+			"N": { type: "item", code: "game:metalnailsandstrips-copper", name: "nail", quantity:2},
+		},
+		name: "tyrannobridle",
+		width: 3,
+		height: 3,
+		output: { type: "item", code: "ornithomimosauria:ornithowearable-bridle2", "quantity": 1 }
+	},
+]

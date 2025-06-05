@@ -1,0 +1,1400 @@
+{
+    "code": "ornithomimosauria",
+    "class": "EntityAgent",
+    "variantgroups": [
+        {"code": "type","states":["deinocheirus", "gallimimus", "garudimimus", "paraxenisaurus", "sinornithomimus", "struthiomimus", "ornithomimus", "dromiceiomimus", "harpymimus", "pelecanimimus", "kinnareemimus", "nqwebasaurus", "tyrannomimus", "dzharacursor"]},
+        {"code": "age","states": [ "adult","baby"]},
+        {"code": "gender","states": ["male","female"]},
+    ],
+    "fallDamageMultiplierByType": {
+		"*-baby-*" :0.5,
+		"*-deinocheirus-adult-*":8.0,
+		"*-paraxenisaurus-adult-*":5.6,
+		"*-adult-*":0.8,
+    },
+    "canClimbByType": {"*-adult-*":false,"*-baby-*":true},
+    "canClimbAnywhereByType": {"*-adult-*":false,"*-baby-*":true},
+    "hitBoxSizeByType": {
+			"*-deinocheirus-adult-*": {"x": 2.0,"y": 4.0}, "*-deinocheirus-baby-*": {"x": 0.4,"y": 1.6},
+			"*-paraxenisaurus-adult-*": {"x": 1.4,"y": 2.9}, "*-paraxenisaurus-baby-*": {"x": 0.3,"y": 1.2},
+			"*-gallimimus-adult-*": {"x": 1.3,"y": 2.5}, "*-gallimimus-baby-*": {"x": 0.3,"y": 1.0},
+			"*-dzharacursor-adult-*": {"x": 1.1,"y": 2.1}, "*-dzharacursor-baby-*": {"x": 0.2,"y": 0.8},
+			"*-garudimimus-adult-*": {"x": 0.9,"y": 1.8}, "*-garudimimus-baby-*": {"x": 0.2,"y": 0.7},
+			"*-sinornithomimus-adult-*": {"x": 0.8,"y": 1.6}, "*-sinornithomimus-baby-*": {"x": 0.2,"y": 0.6},
+			"*-struthiomimus-adult-*": {"x": 0.8,"y": 1.6}, "*-struthiomimus-baby-*": {"x": 0.2,"y": 0.6},
+			"*-ornithomimus-adult-*": {"x": 0.8,"y": 1.6}, "*-ornithomimus-baby-*": {"x": 0.2,"y": 0.6},
+			"*-dromiceiomimus-adult-*": {"x": 0.7,"y": 1.4}, "*-dromiceiomimus-baby-*": {"x": 0.1,"y": 0.6},
+			"*-kinnareemimus-adult-*": {"x": 0.7,"y": 1.4}, "*-kinnareemimus-baby-*": {"x": 0.1,"y": 0.6},
+			"*-tyrannomimus-adult-*": {"x": 0.7,"y": 1.4}, "*-tyrannomimus-baby-*": {"x": 0.1,"y": 0.6},
+			"*-harpymimus-adult-*": {"x": 0.5,"y": 1.0}, "*-harpymimus-baby-*": {"x": 0.1,"y": 0.4},
+			"*-pelecanimimus-adult-*": {"x": 0.5,"y": 1.0}, "*-pelecanimimus-baby-*": {"x": 0.1,"y": 0.4},
+			"*-nqwebasaurus-adult-*": {"x": 0.4,"y": 0.9}, "*-nqwebasaurus-baby-*": {"x": 0.1,"y": 0.4},
+		},
+
+    "deadhitBoxSizeByType": {"*-adult-*":{	"x": 1,"y": 1},"*-baby-*":{	"x": 0.2,"y": 0.2}},
+    "eyeHeightByType": {"*":1},
+    "weightByType": {"*-adult-*":4000,"*-baby-*":10},
+    "knockbackResistanceByType": {"*-adult-*": 1,"*-baby-*": 0	},
+
+    "drops": [],
+    "attributes": {
+		"tamedByType": {"*": false },
+		"killedByInfoText": "deadcreature-killed",
+		"handbook": {"groupcode": "creaturegroup-ornithomimosauria"},
+		"minGenerationToAllowHealing": 0,
+		"creatureDiet": {
+			"foodCategories": ["Fruit", "Vegetable", "Grain","Protein"],
+			"foodTags": ["fruitmash","nibblecrops", "sweetBerryBush","grass","fish","fishfillet","jerky","fisheggs","crabmeat","psfish","cod",]
+			},
+		},
+	"behaviorConfigs": {
+		"rideableaccessories": {
+			"wearableSlots": [
+				{"code": "head", "forCategoryCodes": ["ornithobridle"], "attachmentPointCode": "HeadAP" },
+				{"code": "face", "forCategoryCodes": [], "attachmentPointCode": "FaceAP" },
+				{"code": "neck", "forCategoryCodes": [], "attachmentPointCode": "NeckAP" },
+				{"code": "middleback", "forCategoryCodes": ["ornithosaddle"], "attachmentPointCode": "MidAP", },
+			]
+		},
+		"selectionboxes": {
+			"selectionBoxes": ["HeadAP","FaceAP", "NeckAP", "MidAP"]
+		},
+		"rideable": {
+			"interactMountAnySeat": true,
+			"seats": [
+				{ "apName": "Rider", "selectionBox": "NeckAP", "bodyYawLimit": 0.2, "controllable": true,
+					"mountOffsetByType": {
+						"*": {"x":0,"y":0.0,"z":0},
+					}
+				},
+			],
+			"controls": {
+				"idle": {
+					"weight": 1,
+					"riderAnim": {
+						"animation": "rideelk-idle",
+						"animationSpeed": 0.00000001,
+						"weight": 1,
+						"withFpVariant": true,
+						"blendMode": "Average",
+						"elementWeight": {
+							"LowerTorso": 80,
+							"UpperTorso": 80,
+							"UpperFootR": 80,
+							"UpperFootL": 80,
+							"LowerFootR": 80,
+							"LowerFootL": 80
+						},
+						"elementBlendMode": {
+							"LowerTorso": "Average",
+							"UpperTorso": "Average",
+							"UpperFootR": "Average",
+							"UpperFootL": "Average",
+							"LowerFootR": "Average",
+							"LowerFootL": "Average"
+						}
+					}
+				},
+				"swim": {
+					"animation": "Swim",
+					"movespeedByType": {
+							"*-baby-*": 0.004,
+							"*-adult-*": 0.01,
+
+						},
+						"animationSpeedByType": {
+							"*-baby-*": 1,
+							"*-adult-*": 1,
+						},
+					"weight": 10,
+					"blendMode": "Average",
+					"riderAnim": {
+						"animation": "rideelk-walk",
+						"animationSpeed": 1,
+						"weight": 1,
+						"withFpVariant": true,
+						"blendMode": "Average",
+						"elementWeight": {
+							"LowerTorso": 80,
+							"UpperTorso": 80,
+							"UpperFootR": 80,
+							"UpperFootL": 80,
+							"LowerFootR": 80,
+							"LowerFootL": 80
+						},
+						"elementBlendMode": {
+							"LowerTorso": "Average",
+							"UpperTorso": "Average",
+							"UpperFootR": "Average",
+							"UpperFootL": "Average",
+							"LowerFootR": "Average",
+							"LowerFootL": "Average"
+						}
+					}
+				},
+				"walk": {
+					"animation": "Walk",
+					"weight": 10,
+					"movespeedByType": {
+							"*-baby-*": 0.0012,
+							"*-deinocheirus-adult-*":0.02,
+							"*-paraxenisaurus-adult-*":0.0176,
+							"*-gallimimus-adult-*":0.0168,
+							"*-dzharacursor-adult-*":0.016,
+							"*-garudimimus-adult-*":0.0152,
+							"*-sinornithomimus-adult-*":0.0149,
+							"*-struthiomimus-adult-*":0.0149,
+							"*-ornithomimus-adult-*":0.0149,
+							"*-dromiceiomimus-adult-*":0.0144,
+							"*-kinnareemimus-adult-*":0.0144,
+							"*-tyrannomimus-adult-*":0.0144,
+							"*-harpymimus-adult-*":0.0136,
+							"*-pelecanimimus-adult-*":0.0136,
+							"*-nqwebasaurus-adult-*":0.0132,
+						},
+						"animationSpeedByType": {
+							"*-baby-*": 1,
+							"*-adult-*": 1,
+						},
+					"blendMode": "Average",
+					"riderAnim": {
+						"animation": "rideelk-walk",
+						"animationSpeed": 1,
+						"weight": 1,
+						"withFpVariant": true,
+						"blendMode": "Average",
+						"elementWeight": {
+							"LowerTorso": 80,
+							"UpperTorso": 80,
+							"UpperFootR": 80,
+							"UpperFootL": 80,
+							"LowerFootR": 80,
+							"LowerFootL": 80
+						},
+						"elementBlendMode": {
+							"LowerTorso": "Average",
+							"UpperTorso": "Average",
+							"UpperFootR": "Average",
+							"UpperFootL": "Average",
+							"LowerFootR": "Average",
+							"LowerFootL": "Average"
+						}
+					}
+				},
+				"walkback": {
+					"animation": "Walk",
+					"weight": 10,
+					"movespeedByType": {
+							"*-baby-*": 0.0012,
+							"*-deinocheirus-adult-*":0.02,
+							"*-paraxenisaurus-adult-*":0.0176,
+							"*-gallimimus-adult-*":0.0168,
+							"*-dzharacursor-adult-*":0.016,
+							"*-garudimimus-adult-*":0.0152,
+							"*-sinornithomimus-adult-*":0.0149,
+							"*-struthiomimus-adult-*":0.0149,
+							"*-ornithomimus-adult-*":0.0149,
+							"*-dromiceiomimus-adult-*":0.0144,
+							"*-kinnareemimus-adult-*":0.0144,
+							"*-tyrannomimus-adult-*":0.0144,
+							"*-harpymimus-adult-*":0.0136,
+							"*-pelecanimimus-adult-*":0.0136,
+							"*-nqwebasaurus-adult-*":0.0132,
+						},
+						"animationSpeedByType": {
+							"*-baby-*": 1,
+							"*-adult-*": 1,
+						},
+					"easeInSpeed": 1,
+					"easeOutSpeed": 3,
+					"blendMode": "Average",
+					"riderAnim": {
+						"animation": "rideelk-walk",
+						"animationSpeed": 1,
+						"weight": 1,
+						"withFpVariant": true,
+						"blendMode": "Average",
+						"elementWeight": {
+							"LowerTorso": 80,
+							"UpperTorso": 80,
+							"UpperFootR": 80,
+							"UpperFootL": 80,
+							"LowerFootR": 80,
+							"LowerFootL": 80
+						},
+						"elementBlendMode": {
+							"LowerTorso": "Average",
+							"UpperTorso": "Average",
+							"UpperFootR": "Average",
+							"UpperFootL": "Average",
+							"LowerFootR": "Average",
+							"LowerFootL": "Average"
+						}
+					}
+				},
+				"sprint": {
+					"animation": "Run",
+					"weight": 10,
+						"priority": 2.1,
+						"movespeedByType": {
+							"*-baby-*": 0.010,
+							"*-deinocheirus-adult-*":0.035,
+							"*-paraxenisaurus-adult-*":0.0455,
+							"*-gallimimus-adult-*":0.0793,
+							"*-dzharacursor-adult-*":0.0817,
+							"*-garudimimus-adult-*":0.084,
+							"*-sinornithomimus-adult-*":0.0849,
+							"*-struthiomimus-adult-*":0.0849,
+							"*-ornithomimus-adult-*":0.0849,
+							"*-dromiceiomimus-adult-*":0.0863,
+							"*-kinnareemimus-adult-*":0.0863,
+							"*-tyrannomimus-adult-*":0.0863,
+							"*-harpymimus-adult-*":0.0887,
+							"*-pelecanimimus-adult-*":0.0887,
+							"*-nqwebasaurus-adult-*":0.0898,
+						},
+						"animationSpeedByType": {
+							"*-baby-*": 1.5,
+							"*-deinocheirus-adult-*":1.5,
+							"*-paraxenisaurus-adult-*":1.5,
+							"*": 2
+						},
+					"blendMode": "Average",
+					"riderAnim": {
+						"animation": "rideelk-run",
+						"animationSpeed": 2,
+						"weight": 1,
+						"withFpVariant": true,
+						"blendMode": "Average",
+						"elementWeight": {
+							"LowerTorso": 80,
+							"UpperTorso": 80,
+							"UpperFootR": 80,
+							"UpperFootL": 80,
+							"LowerFootR": 80,
+							"LowerFootL": 80
+						},
+						"elementBlendMode": {
+							"LowerTorso": "Average",
+							"UpperTorso": "Average",
+							"UpperFootR": "Average",
+							"UpperFootL": "Average",
+							"LowerFootR": "Average",
+							"LowerFootL": "Average"
+						}
+					}
+				},
+				"jump": {
+					"animation": "Walk",
+					"weight": 50,
+					"easeOutSpeed": 40,
+					"blendMode": "Average",
+					"animationSpeed": 1,
+					"movespeed": 0.08,
+					"riderAnim": {
+						"animation": "rideelk-jump",
+						"animationSpeed": 1,
+						"weight": 10,
+						"withFpVariant": true,
+						"blendMode": "Average",
+						"elementWeight": {
+							"LowerTorso": 160,
+							"UpperTorso": 160,
+							"UpperFootR": 160,
+							"UpperFootL": 160,
+							"LowerFootR": 160,
+							"LowerFootL": 160
+						},
+						"elementBlendMode": {
+							"LowerTorso": "Average",
+							"UpperTorso": "Average",
+							"UpperFootR": "Average",
+							"UpperFootL": "Average",
+							"LowerFootR": "Average",
+							"LowerFootL": "Average"
+						}
+					}
+				}
+			}
+		},
+		"ownable": {
+			"groupCode": "mountableanimal"
+		}
+	},
+    "client": {
+        "renderer": "Shape",
+        "shapeByType": {
+			"*-deinocheirus-adult-*": {"base": "entity/land/ornithomimosauria/deinocheirus/adult"}, "*-deinocheirus-baby-*": {"base": "entity/land/ornithomimosauria/deinocheirus/baby"},
+			"*-gallimimus-adult-*": {"base": "entity/land/ornithomimosauria/gallimimus/adult"}, "*-gallimimus-baby-*": {"base": "entity/land/ornithomimosauria/gallimimus/baby"},
+			"*-garudimimus-adult-*": {"base": "entity/land/ornithomimosauria/garudimimus/adult"}, "*-garudimimus-baby-*": {"base": "entity/land/ornithomimosauria/garudimimus/baby"},
+			"*-paraxenisaurus-adult-*": {"base": "entity/land/ornithomimosauria/paraxenisaurus/adult"}, "*-paraxenisaurus-baby-*": {"base": "entity/land/ornithomimosauria/paraxenisaurus/baby"},
+			"*-sinornithomimus-adult-*": {"base": "entity/land/ornithomimosauria/sinornithomimus/adult"}, "*-sinornithomimus-baby-*": {"base": "entity/land/ornithomimosauria/sinornithomimus/baby"},
+			"*-struthiomimus-adult-*": {"base": "entity/land/ornithomimosauria/struthiomimus/adult"}, "*-struthiomimus-baby-*": {"base": "entity/land/ornithomimosauria/struthiomimus/baby"},
+			"*-ornithomimus-adult-*": {"base": "entity/land/ornithomimosauria/ornithomimus/adult"}, "*-ornithomimus-baby-*": {"base": "entity/land/ornithomimosauria/ornithomimus/baby"},
+			"*-dromiceiomimus-adult-*": {"base": "entity/land/ornithomimosauria/dromiceiomimus/adult"}, "*-dromiceiomimus-baby-*": {"base": "entity/land/ornithomimosauria/dromiceiomimus/baby"},
+			"*-harpymimus-adult-*": {"base": "entity/land/ornithomimosauria/harpymimus/adult"}, "*-harpymimus-baby-*": {"base": "entity/land/ornithomimosauria/harpymimus/baby"},
+			"*-pelecanimimus-adult-*": {"base": "entity/land/ornithomimosauria/pelecanimimus/adult"}, "*-pelecanimimus-baby-*": {"base": "entity/land/ornithomimosauria/pelecanimimus/baby"},
+			"*-kinnareemimus-adult-*": {"base": "entity/land/ornithomimosauria/kinnareemimus/adult"}, "*-kinnareemimus-baby-*": {"base": "entity/land/ornithomimosauria/kinnareemimus/baby"},
+			"*-nqwebasaurus-adult-*": {"base": "entity/land/ornithomimosauria/nqwebasaurus/adult"}, "*-nqwebasaurus-baby-*": {"base": "entity/land/ornithomimosauria/nqwebasaurus/baby"},
+			"*-tyrannomimus-adult-*": {"base": "entity/land/ornithomimosauria/tyrannomimus/adult"}, "*-tyrannomimus-baby-*": {"base": "entity/land/ornithomimosauria/tyrannomimus/baby"},
+			"*-dzharacursor-adult-*": {"base": "entity/land/ornithomimosauria/dzharacursor/adult"}, "*-dzharacursor-baby-*": {"base": "entity/land/ornithomimosauria/dzharacursor/baby"},
+
+		},
+         "textureByType": {
+            "*-deinocheirus-adult-*":{"base": "entity/deinocheirus-adult"},"*-deinocheirus-baby-*":{"base": "entity/deinocheirus-adult"},
+			"*-gallimimus-adult-*":{"base": "entity/gallimimus-adult"},"*-gallimimus-baby-*":{"base": "entity/gallimimus-adult"},
+			"*-garudimimus-adult-*":{"base": "entity/garudimimus-adult"},"*-garudimimus-baby-*":{"base": "entity/garudimimus-adult"},
+			"*-paraxenisaurus-adult-*":{"base": "entity/paraxenisaurus-adult"},"*-paraxenisaurus-baby-*":{"base": "entity/paraxenisaurus-adult"},
+			"*-sinornithomimus-adult-*":{"base": "entity/sinornithomimus-adult"},"*-sinornithomimus-baby-*":{"base": "entity/sinornithomimus-adult"},
+			"*-struthiomimus-adult-*":{"base": "entity/struthiomimus-adult"},"*-struthiomimus-baby-*":{"base": "entity/struthiomimus-adult"},
+			"*-ornithomimus-adult-*":{"base": "entity/ornithomimus-adult"},"*-ornithomimus-baby-*":{"base": "entity/ornithomimus-adult"},
+			"*-dromiceiomimus-adult-*":{"base": "entity/dromiceiomimus-adult"},"*-dromiceiomimus-baby-*":{"base": "entity/dromiceiomimus-adult"},
+			"*-harpymimus-adult-*":{"base": "entity/harpymimus-adult"},"*-harpymimus-baby-*":{"base": "entity/harpymimus-adult"},
+			"*-pelecanimimus-adult-*":{"base": "entity/pelecanimimus-adult"},"*-pelecanimimus-baby-*":{"base": "entity/pelecanimimus-adult"},
+			"*-kinnareemimus-adult-*":{"base": "entity/kinnareemimus-adult"},"*-kinnareemimus-baby-*":{"base": "entity/kinnareemimus-adult"},
+			"*-nqwebasaurus-adult-*":{"base": "entity/nqwebasaurus-adult"},"*-nqwebasaurus-baby-*":{"base": "entity/nqwebasaurus-adult"},
+			"*-tyrannomimus-adult-*":{"base": "entity/tyrannomimus-adult"},"*-tyrannomimus-baby-*":{"base": "entity/tyrannomimus-adult"},
+			"*-dzharacursor-adult-*":{"base": "entity/dzharacursor-adult"},"*-dzharacursor-baby-*":{"base": "entity/dzharacursor-adult"},
+        },
+        "sizeByType": {
+			"*-deinocheirus-adult-male": 1.0,"*-deinocheirus-adult-female": 0.95,"*-deinocheirus-baby-*": 1.0,
+			"*-paraxenisaurus-adult-male": 0.7,"*-paraxenisaurus-adult-female": 0.65,"*-paraxenisaurus-baby-*": 0.7,
+			"*-gallimimus-adult-male": 0.6,"*-gallimimus-adult-female": 0.55,"*-gallimimus-baby-*": 0.6,
+			"*-dzharacursor-adult-male": 0.5,"*-dzharacursor-adult-female": 0.45,"*-dzharacursor-baby-*": 0.5,
+			"*-garudimimus-adult-male": 0.4,"*-garudimimus-adult-female": 0.3,"*-garudimimus-baby-*": 0.4,
+			"*-sinornithomimus-adult-male": 0.36,"*-sinornithomimus-adult-female": 0.25,"*-sinornithomimus-baby-*": 0.36,
+			"*-struthiomimus-adult-male": 0.36,"*-struthiomimus-adult-female": 0.25,"*-struthiomimus-baby-*": 0.36,
+			"*-ornithomimus-adult-male": 0.36,"*-ornithomimus-adult-female": 0.25,"*-ornithomimus-baby-*": 0.36,
+			"*-dromiceiomimus-adult-male": 0.3,"*-dromiceiomimus-adult-female": 0.25,"*-dromiceiomimus-baby-*": 0.3,
+			"*-kinnareemimus-adult-male": 0.3,"*-kinnareemimus-adult-female": 0.25,"*-kinnareemimus-baby-*": 0.3,
+			"*-tyrannomimus-adult-male": 0.3,"*-tyrannomimus-adult-female": 0.25,"*-tyrannomimus-baby-*": 0.3,
+			"*-harpymimus-adult-male": 0.2,"*-harpymimus-adult-female": 0.15,"*-harpymimus-baby-*": 0.2,
+			"*-pelecanimimus-adult-male": 0.2,"*-pelecanimimus-adult-female": 0.15,"*-pelecanimimus-baby-*": 0.2,
+			"*-nqwebasaurus-adult-male": 0.15,"*-nqwebasaurus-adult-female": 0.1,"*-nqwebasaurus-baby-*": 0.15,
+		},
+
+        "behaviors": [
+			{"code": "rideable", "enabledByType": {  "*-baby-*": false,"*-deinocheirus-*": true,"*-paraxenisaurus-*": true,"*-gallimimus-*": true,"*-dzharacursor-*": true,"*": false},"minGeneration": 3 },
+            {"code": "repulseagents" },
+			{"code": "controlledphysics","stepHeight": 1.1251},
+			{"code": "floatupwhenstuck","onlyWhenDead": true},
+			{"code": "interpolateposition" },
+			{"code": "harvestable","quantitySlots": 8},
+			{"code": "multiply", "enabledByType": { "*-adult-female": true, "*": false } },
+			{"code": "despawn","minPlayerDistance": 8,"belowLightLevel": 8,"minSeconds": 300},
+			{"code": "ropetieable","minGeneration": 2},
+			{"code": "selectionboxes", "enabledByType": {  "*-baby-*": false,"*-deinocheirus-*": true,"*-paraxenisaurus-*": true,"*-gallimimus-*": true,"*-dzharacursor-*": true,"*": false},"minGeneration": 3 },
+			{"code": "ownable", "enabledByType": {  "*-baby-*": false,"*-deinocheirus-*": true,"*-paraxenisaurus-*": true,"*-gallimimus-*": true,"*-dzharacursor-*": true,"*": false},"minGeneration": 3 },
+			{"code": "rideableaccessories", "enabledByType": {  "*-baby-*": false,"*-deinocheirus-*": true,"*-paraxenisaurus-*": true,"*-gallimimus-*": true,"*-dzharacursor-*": true,"*": false},"minGeneration": 3 },
+        ],
+        "animations": [
+			{"code": "attack","animation": "Attack","animationSpeed": 1.2,"weight": 10,"blendMode": "AddAverage"},
+			{"code": "die","animation": "Die","easeInSpeed": 3,"animationSpeed": 1,"weight": 10,"blendMode": "Average","triggeredBy": { "onControls": [ "dead" ] }},
+			{"code": "eat","animation": "Eat","easeInSpeed": 4,"easeOutSpeed": 4,"blendMode": "Average"},
+			{"code": "run","animation": "Run","easeInSpeed": 10,"easeOutSpeed": 2,"supressDefaultAnimation": true,"blendMode": "Average"},
+			{"code": "hurt","animation": "Hurt","animationSpeed": 2.2,"weight": 10,"blendMode": "AddAverage"},
+			{"code": "idle","animation": "Idle","animationSpeed": 0.5,"blendMode": "AddAverage","easeOutSpeed": 4,"triggeredBy": { "defaultAnim": true }},
+			{"code": "look","animation": "Look", "blendMode": "AddAverage","easeOutSpeed": 0.25},
+			{"code": "alert","animation": "Alert","animationSpeed": 1.2,"weight": 10,"blendMode": "AddAverage"},
+			{"code": "roar","animation": "Roar","animationSpeed": 2.2,"weight": 10,"blendMode": "AddAverage"},
+			{"code": "sit","animation": "Sit","easeInSpeed": 0.1,"easeOutSpeed": 0.5,"blendMode": "Average"},
+			{"code": "lie","animation": "Lie","easeInSpeed": 0.1,"easeOutSpeed": 0.5,"weight": 10,"blendMode": "Average"},
+			{"code": "sleep","animation": "Sleep","easeInSpeed": 2,"easeOutSpeed": 2,"weight": 5,"blendMode": "Average"},
+			{"code": "swim","animation": "Swim","supressDefaultAnimation": true,"blendMode": "Average"},
+			{"code": "walk","animation": "Walk","easeInSpeed": 10,"supressDefaultAnimation": true,"blendMode": "Average"}
+		]
+    },
+    "server": {
+		"attributes": {"pathfinder": {"minTurnAnglePerSec": 60,"maxTurnAnglePerSec": 120}},
+        "behaviors": [
+			{"code": "rideable", "enabledByType": {  "*-baby-*": false,"*-deinocheirus-*": true,"*-paraxenisaurus-*": true,"*-gallimimus-*": true,"*-dzharacursor-*": true,"*": false},"minGeneration": 3 },
+			{"code": "selectionboxes", "enabledByType": {  "*-baby-*": false,"*-deinocheirus-*": true,"*-paraxenisaurus-*": true,"*-gallimimus-*": true,"*-dzharacursor-*": true,"*": false},"minGeneration": 3 },
+			{"code": "ownable", "enabledByType": {  "*-baby-*": false,"*-deinocheirus-*": true,"*-paraxenisaurus-*": true,"*-gallimimus-*": true,"*-dzharacursor-*": true,"*": false},"minGeneration": 3 },
+			{"code": "rideableaccessories", "enabledByType": {  "*-baby-*": false,"*-deinocheirus-*": true,"*-paraxenisaurus-*": true,"*-gallimimus-*": true,"*-dzharacursor-*": true,"*": false},"minGeneration": 3 },
+            {"code": "repulseagents" },
+            {"code": "controlledphysics","stepHeight": 1.1251},
+            {"code": "despawn","minPlayerDistance": 8,"belowLightLevel": 8,"minSeconds": 300},
+            {"code": "floatupwhenstuck","onlyWhenDead": true},
+            {"code": "breathe"},
+            {"code": "health",
+                    "maxhealthByType": {
+                        "*-deinocheirus-adult-male": 150.0,"*-deinocheirus-adult-female": 135.0,"*-deinocheirus-baby-*": 6.0,
+						"*-paraxenisaurus-adult-male": 99.0,"*-paraxenisaurus-adult-female": 89.0,"*-paraxenisaurus-baby-*": 4.0,
+						"*-gallimimus-adult-male": 82.0,"*-gallimimus-adult-female": 74.0,"*-gallimimus-baby-*": 4.0,
+						"*-dzharacursor-adult-male": 65.0,"*-dzharacursor-adult-female": 58.0,"*-dzharacursor-baby-*": 3.0,
+						"*-garudimimus-adult-male": 48.0,"*-garudimimus-adult-female": 43.0,"*-garudimimus-baby-*": 2.0,
+						"*-sinornithomimus-adult-male": 41.0,"*-sinornithomimus-adult-female": 37.0,"*-sinornithomimus-baby-*": 2.0,
+						"*-struthiomimus-adult-male": 41.0,"*-struthiomimus-adult-female": 37.0,"*-struthiomimus-baby-*": 2.0,
+						"*-ornithomimus-adult-male": 41.0,"*-ornithomimus-adult-female": 37.0,"*-ornithomimus-baby-*": 2.0,
+						"*-dromiceiomimus-adult-male": 31.0,"*-dromiceiomimus-adult-female": 28.0,"*-dromiceiomimus-baby-*": 2.0,
+						"*-kinnareemimus-adult-male": 31.0,"*-kinnareemimus-adult-female": 28.0,"*-kinnareemimus-baby-*": 2.0,
+						"*-tyrannomimus-adult-male": 31.0,"*-tyrannomimus-adult-female": 28.0,"*-tyrannomimus-baby-*": 2.0,
+						"*-harpymimus-adult-male": 14.0,"*-harpymimus-adult-female": 13.0,"*-harpymimus-baby-*": 1.0,
+						"*-pelecanimimus-adult-male": 14.0,"*-pelecanimimus-adult-female": 13.0,"*-pelecanimimus-baby-*": 1.0,
+						"*-nqwebasaurus-adult-male": 5.0,"*-nqwebasaurus-adult-female": 4.0,"*-nqwebasaurus-baby-*": 1.0,
+                    }
+			},
+            {"code": "deaddecay",
+                    "hoursToDecay": 96,
+                    "decayedBlockByType": {
+                    "*-adult-*": "carcass-medium",
+                    "*-baby-*": "carcass-small"
+					}
+            },
+            {"code": "harvestable",
+				"quantitySlots": 8,
+				"drops": [
+					{
+						"type": "item",
+						"code": "game:poultry-raw",
+						"quantityByType": {
+							"*-deinocheirus-adult-*": {"avg": 60.0,"var": 1}, "*-deinocheirus-baby-*": {"avg": 2.0,"var": 1},
+							"*-paraxenisaurus-adult-*": {"avg": 40.0,"var": 1}, "*-paraxenisaurus-baby-*": {"avg": 1.0,"var": 1},
+							"*-gallimimus-adult-*": {"avg": 33.0,"var": 1}, "*-gallimimus-baby-*": {"avg": 1.0,"var": 1},
+							"*-dzharacursor-adult-*": {"avg": 27.0,"var": 1}, "*-dzharacursor-baby-*": {"avg": 1.0,"var": 1},
+							"*-garudimimus-adult-*": {"avg": 20.0,"var": 1}, "*-garudimimus-baby-*": {"avg": 1.0,"var": 1},
+							"*-sinornithomimus-adult-*": {"avg": 17.0,"var": 1}, "*-sinornithomimus-baby-*": {"avg": 1.0,"var": 1},
+							"*-struthiomimus-adult-*": {"avg": 17.0,"var": 1}, "*-struthiomimus-baby-*": {"avg": 1.0,"var": 1},
+							"*-ornithomimus-adult-*": {"avg": 17.0,"var": 1}, "*-ornithomimus-baby-*": {"avg": 1.0,"var": 1},
+							"*-dromiceiomimus-adult-*": {"avg": 13.0,"var": 1}, "*-dromiceiomimus-baby-*": {"avg": 1.0,"var": 1},
+							"*-kinnareemimus-adult-*": {"avg": 13.0,"var": 1}, "*-kinnareemimus-baby-*": {"avg": 1.0,"var": 1},
+							"*-tyrannomimus-adult-*": {"avg": 13.0,"var": 1}, "*-tyrannomimus-baby-*": {"avg": 1.0,"var": 1},
+							"*-harpymimus-adult-*": {"avg": 7.0,"var": 1}, "*-harpymimus-baby-*": {"avg": 0.0,"var": 1},
+							"*-pelecanimimus-adult-*": {"avg": 7.0,"var": 1}, "*-pelecanimimus-baby-*": {"avg": 0.0,"var": 1},
+							"*-nqwebasaurus-adult-*": {"avg": 3.0,"var": 1}, "*-nqwebasaurus-baby-*": {"avg": 0.0,"var": 1},
+							"*": {"avg": 0.0,"var": 0.0}
+						}
+					},
+					{
+						"type": "item",
+						"code": "game:fat",
+						"quantityByType": {
+							"*-deinocheirus-adult-*": {"avg": 25.0,"var": 2}, "*-deinocheirus-baby-*": {"avg": 1.0,"var": 0},
+							"*-paraxenisaurus-adult-*": {"avg": 17.0,"var": 2}, "*-paraxenisaurus-baby-*": {"avg": 1.0,"var": 0},
+							"*-gallimimus-adult-*": {"avg": 14.0,"var": 2}, "*-gallimimus-baby-*": {"avg": 1.0,"var": 0},
+							"*-dzharacursor-adult-*": {"avg": 11.0,"var": 2}, "*-dzharacursor-baby-*": {"avg": 1.0,"var": 0},
+							"*-garudimimus-adult-*": {"avg": 8.0,"var": 2}, "*-garudimimus-baby-*": {"avg": 0.0,"var": 0},
+							"*-sinornithomimus-adult-*": {"avg": 7.0,"var": 2}, "*-sinornithomimus-baby-*": {"avg": 0.0,"var": 0},
+							"*-struthiomimus-adult-*": {"avg": 7.0,"var": 2}, "*-struthiomimus-baby-*": {"avg": 0.0,"var": 0},
+							"*-ornithomimus-adult-*": {"avg": 7.0,"var": 2}, "*-ornithomimus-baby-*": {"avg": 0.0,"var": 0},
+							"*-dromiceiomimus-adult-*": {"avg": 6.0,"var": 2}, "*-dromiceiomimus-baby-*": {"avg": 0.0,"var": 0},
+							"*-kinnareemimus-adult-*": {"avg": 6.0,"var": 2}, "*-kinnareemimus-baby-*": {"avg": 0.0,"var": 0},
+							"*-tyrannomimus-adult-*": {"avg": 6.0,"var": 2}, "*-tyrannomimus-baby-*": {"avg": 0.0,"var": 0},
+							"*-harpymimus-adult-*": {"avg": 3.0,"var": 2}, "*-harpymimus-baby-*": {"avg": 0.0,"var": 0},
+							"*-pelecanimimus-adult-*": {"avg": 3.0,"var": 2}, "*-pelecanimimus-baby-*": {"avg": 0.0,"var": 0},
+							"*-nqwebasaurus-adult-*": {"avg": 1.0,"var": 2}, "*-nqwebasaurus-baby-*": {"avg": 0.0,"var": 0},
+							"*": {"avg": 0.0,"var": 0.0}
+						}
+					},
+					{
+						"type": "item",
+						"code": "game:hide-raw-huge",
+						"quantityByType": {
+							"*-deinocheirus-adult-*": {"avg": 9.0,"var": 0},
+							"*-paraxenisaurus-adult-*": {"avg": 6.0,"var": 0},
+							"*-gallimimus-adult-*": {"avg": 5.0,"var": 0},
+							"*": {"avg": 0.0,"var": 0.0}
+						}
+					},
+					{
+						"type": "item",
+						"code": "game:hide-raw-medium",
+						"quantityByType": {
+							"*-dzharacursor-adult-*": {"avg": 4.0,"var": 0},
+							"*-garudimimus-adult-*": {"avg": 4.0,"var": 0},
+							"*-sinornithomimus-adult-*": {"avg": 3.0,"var": 0},
+							"*-struthiomimus-adult-*": {"avg": 3.0,"var": 0},
+							"*-ornithomimus-adult-*": {"avg": 3.0,"var": 0},
+							"*-dromiceiomimus-adult-*": {"avg": 3.0,"var": 0},
+							"*-kinnareemimus-adult-*": {"avg": 3.0,"var": 0},
+							"*-tyrannomimus-adult-*": {"avg": 3.0,"var": 0},
+							"*": {"avg": 0.0,"var": 0.0}
+						}
+					},
+					{
+						"type": "item",
+						"code": "game:hide-raw-small",
+						"quantityByType": {
+							"*-harpymimus-adult-*": {"avg": 2.0,"var": 0},
+							"*-pelecanimimus-adult-*": {"avg": 2.0,"var": 0},
+							"*-nqwebasaurus-adult-*": {"avg": 1.0,"var": 0},
+							"*-baby-*": {"avg": 1.0,"var": 0},
+							"*": {"avg": 0.0,"var": 0.0}
+						}
+					},
+					{
+						"type": "item",
+						"code": "game:feather",
+						"quantityByType": {
+							"*-baby-*": {"avg": 12.0,"var": 2.0},
+							"*-adult-*": {"avg": 30,"var": 5},
+							"*": {"avg": 0.0,"var": 0.0}
+						}
+					}
+				]
+			},
+			{"code": "multiply",
+				"enabledByType": {
+					"*-adult-female": true,
+					"*": false
+				},
+				"spawnEntityCodesByType": {
+					"*": [ { "code":"ornithomimosauria:ornithomimosauria-{type}-egg-raw"}]},
+				"requiresNearbyEntityCodeByType": {"*": "ornithomimosauria:ornithomimosauria-{type}-adult-male"},
+				"eatAnyway": true,
+				"requiresNearbyEntityRange": 10,
+				"spawnQuantityMin": 6,
+				"spawnQuantityMaxByType": {"*": 12},
+				"pregnancyDaysByType": {
+					"*-deinocheirus-adult-*":15,
+					"*-paraxenisaurus-adult-*":10,
+					"*": 3
+				},
+				"multiplyCooldownDaysMinByType": {"*": 3},
+				"multiplyCooldownDaysMaxByType": {"*": 6},
+				"portionsEatenForMultiplyByType": {
+					"*-deinocheirus-adult-*":70.0,
+					"*-paraxenisaurus-adult-*":47.0,
+					"*-gallimimus-adult-*":39.0,
+					"*-dzharacursor-adult-*":31.0,
+					"*-garudimimus-adult-*":23.0,
+					"*-sinornithomimus-adult-*":20.0,
+					"*-struthiomimus-adult-*":20.0,
+					"*-ornithomimus-adult-*":20.0,
+					"*-dromiceiomimus-adult-*":16.0,
+					"*-kinnareemimus-adult-*":16.0,
+					"*-tyrannomimus-adult-*":16.0,
+					"*-harpymimus-adult-*":8.0,
+					"*-pelecanimimus-adult-*":8.0,
+					"*-nqwebasaurus-adult-*":4.0,
+				}
+			},
+            {"code": "grow",
+					"enabledByType": {
+					"*-baby-*": true,
+					"*": false
+				},
+				"hoursToGrowByType": {
+					"*-deinocheirus-*":500.0,
+					"*-paraxenisaurus-*":350.0,
+					"*-gallimimus-*":300.0,
+					"*-dzharacursor-*":250.0,
+					"*-garudimimus-*":200.0,
+					"*-sinornithomimus-*":180.0,
+					"*-struthiomimus-*":180.0,
+					"*-ornithomimus-*":180.0,
+					"*-dromiceiomimus-*":150.0,
+					"*-kinnareemimus-*":150.0,
+					"*-tyrannomimus-*":150.0,
+					"*-harpymimus-*":100.0,
+					"*-pelecanimimus-*":100.0,
+					"*-nqwebasaurus-*":75.0,
+				},
+				"adultEntityCodesByType": {
+					"*-baby-male": ["ornithomimosauria:ornithomimosauria-{type}-adult-male"],
+					"*-baby-female": ["ornithomimosauria:ornithomimosauria-{type}-adult-female"]
+				}
+			},
+			{"code": "emotionstates",
+				"states": [
+					{"code": "aggressiveondamage","duration": 60,
+						"chanceByType": {
+							"*-adult-*": 1,
+							"*-baby-*": 0.5
+						},
+						"slot": 2,"priority": 3,"accumType": "noaccum"},
+					{"code": "fleeondamage","duration": 60,"slot": 1,"chanceByType": {"*-adult-*": 1,"*-baby-*": 0},"priority": 1,"accumType": "max","whenHealthRelBelow": 0.5},
+					{"code": "fleeondamage","duration": 30,"slot": 1,"chanceByType": {"*-adult-*": 0,"*": 1},"priority": 1,"accumType": "max","whenHealthRelBelow": 0.8},
+					{"code": "saturated","duration": 1200,"chance": 1,"slot": 0,"priority": 1,"accumType": "sum"},
+					{ "code": "aggressivearoundentities", "duration": 60, "chanceByType": {"*-baby-*": 0.0,"*-adult-*": 1.0}, "slot": 2, "priority": 5, "entityCodes": ["ornithomimosauria:ornithomimosauria-{type}-baby-male","ornithomimosauria:ornithomimosauria-{type}-baby-female"], "maxGeneration": 1 }
+				]
+			},
+			{
+				"code": "taskai",
+				"aiCreatureType": "LandCreature",
+				"aitasks": [
+                     {
+						"code": "meleeattack",
+						"animation": "Attack",
+						"enabledByType": {
+							"*-deinocheirus-adult-*": true,
+							"*-paraxenisaurus-adult-*": true,
+							"*":false,
+							},
+						"entityCodesByType": {
+							"*-adult-*": [ "player","bear-*","bell-*","bowtorn-*","drifter-*","hyena-*","locust-*","shiver-*","wolf-*",
+
+							"tyrannosauridae-*", "spinosauridae-*","dromaeosauridae-*","abelisauridae-*","mosasauridae-*","carcharodontosauridae-*",
+
+							"hitch",
+
+							"pantherinae-*", "caninae-*","felinae-*","machairodontinae-*","ursidae-*",
+
+							],
+							},
+						"priority": 1.9,
+						"slot": 1,
+						"damageByType": {
+							"*-deinocheirus-adult-male": 10.0,"*-deinocheirus-adult-female": 9.6,
+							"*-paraxenisaurus-adult-male": 8.8,"*-paraxenisaurus-adult-female": 8.4,
+						},
+						"knockbackStrengthByType": {
+							"*-adult-*": 1.0,
+						},
+						"damageTierByType": {
+							"*-adult-*": 2,
+						},
+						"attackAngleRangeDeg": 180,
+						"mincooldown": 0,
+						"maxcooldown": 100,
+						"minDistByType": {"*-adult-*":3,"*":1},
+						"minVerDistByType": {"*-adult-*":3,"*":1},
+						"attackDurationMs": 1250,
+						"damagePlayerAtMs": 400,
+						"animationSpeed": 1,
+						"soundByType": {
+							"*-adult-*":"creature/hurt"},
+					},
+					{
+						"code": "seekentity",
+						"animation": "Run",
+						"enabledByType": {
+							"*-deinocheirus-adult-*": true,
+							"*-paraxenisaurus-adult-*": true,
+							"*":false,
+							},
+						"entityCodesByType": {
+							"*-adult-*": ["player","bell-*","bowtorn-*","drifter-*","hyena-*","locust-*","shiver-*","wolf-*",
+
+							"dromaeosauridae-*",
+
+							"tyrannosauridae-tyrannosaurus-baby-*","tyrannosauridae-tarbosaurus-baby-*","tyrannosauridae-nanuqsaurus-baby-*","tyrannosauridae-albertosaurus-baby-*","tyrannosauridae-gorgosaurus-baby-*","tyrannosauridae-alioramus-baby-*","tyrannosauridae-qianzhousaurus-baby-*","tyrannosauridae-zhuchengtyrannus-baby-*","tyrannosauridae-bistahieversor-baby-*","tyrannosauridae-thanatotheristes-baby-*","tyrannosauridae-teratophoneus-baby-*","tyrannosauridae-dynamoterror-baby-*",
+
+							"carcharodontosauridae-giganotosaurus-baby-*","carcharodontosauridae-carcharodontosaurus-baby-*","carcharodontosauridae-mapusaurus-baby-*","carcharodontosauridae-tyrannotitan-baby-*","carcharodontosauridae-tameryraptor-baby-*","carcharodontosauridae-veterupristisaurus-baby-*","carcharodontosauridae-ulughbegsaurus-baby-*","carcharodontosauridae-siamraptor-baby-*","carcharodontosauridae-shaochilong-baby-*","carcharodontosauridae-concavenator-baby-*","carcharodontosauridae-lusovenator-baby-*","carcharodontosauridae-lajasvenator-baby-*",
+
+							"carcharodontosauridae-giganotosaurus-baby-*","carcharodontosauridae-carcharodontosaurus-baby-*","carcharodontosauridae-mapusaurus-baby-*","carcharodontosauridae-tyrannotitan-baby-*","carcharodontosauridae-tameryraptor-baby-*","carcharodontosauridae-veterupristisaurus-baby-*","carcharodontosauridae-ulughbegsaurus-baby-*","carcharodontosauridae-siamraptor-baby-*","carcharodontosauridae-shaochilong-baby-*","carcharodontosauridae-concavenator-baby-*","carcharodontosauridae-lusovenator-baby-*","carcharodontosauridae-lajasvenator-baby-*",
+
+							"abelisauridae-pycnonemosaurus-baby-*","abelisauridae-ekrixinatosaurus-baby-*","abelisauridae-carnotaurus-baby-*","abelisauridae-chenanisaurus-baby-*","abelisauridae-rajasaurus-baby-*","abelisauridae-abelisaurus-baby-*","abelisauridae-majungasaurus-baby-*","abelisauridae-skorpiovenator-baby-*","abelisauridae-xenotarsosaurus-baby-*","abelisauridae-rahiolisaurus-baby-*","abelisauridae-arcovenator-baby-*","abelisauridae-rugops-baby-*","abelisauridae-aucasaurus-baby-*","abelisauridae-dahalokely-baby-*","abelisauridae-ilokelesia-baby-*","abelisauridae-viavenator-baby-*","abelisauridae-tarascosaurus-baby-*","abelisauridae-thanos-baby-*",
+
+							"spinosauridae-spinosaurus-baby-*", "spinosauridae-oxalaia-baby-*", "spinosauridae-suchomimus-baby-*", "spinosauridae-baryonyx-baby-*", "spinosauridae-ichthyovenator-baby-*","spinosauridae-irritator-baby-*",
+
+							],
+						},
+						"priority": 1.82,
+						"mincooldown": 600,
+						"maxcooldown": 650,
+						"seekingRange": 15,
+						"movespeedByType": {
+							"*-baby-*": 0.010,
+							"*-deinocheirus-adult-*": 0.035,
+							"*-paraxenisaurus-adult-*": 0.0455,
+						},
+						"animationSpeedByType": {
+							"*": 1.5
+						},
+						"whenNotInEmotionState": "fleeondamage"
+					},
+
+					{
+						"code": "seekentity",
+						"animation": "Run",
+						"enabledByType": {
+							"*-deinocheirus-adult-*": true,
+							"*-paraxenisaurus-adult-*": true,
+							"*":false,
+							},
+						"entityCodesByType": {
+							"*-adult-*": ["player","bell-*","bowtorn-*","drifter-*","hyena-*","locust-*","shiver-*","wolf-*",
+
+							"dromaeosauridae-*",
+
+							"tyrannosauridae-tyrannosaurus-baby-*","tyrannosauridae-tarbosaurus-baby-*","tyrannosauridae-nanuqsaurus-baby-*","tyrannosauridae-albertosaurus-baby-*","tyrannosauridae-gorgosaurus-baby-*","tyrannosauridae-alioramus-baby-*","tyrannosauridae-qianzhousaurus-baby-*","tyrannosauridae-zhuchengtyrannus-baby-*","tyrannosauridae-bistahieversor-baby-*","tyrannosauridae-thanatotheristes-baby-*","tyrannosauridae-teratophoneus-baby-*","tyrannosauridae-dynamoterror-baby-*",
+
+							"carcharodontosauridae-giganotosaurus-baby-*","carcharodontosauridae-carcharodontosaurus-baby-*","carcharodontosauridae-mapusaurus-baby-*","carcharodontosauridae-tyrannotitan-baby-*","carcharodontosauridae-tameryraptor-baby-*","carcharodontosauridae-veterupristisaurus-baby-*","carcharodontosauridae-ulughbegsaurus-baby-*","carcharodontosauridae-siamraptor-baby-*","carcharodontosauridae-shaochilong-baby-*","carcharodontosauridae-concavenator-baby-*","carcharodontosauridae-lusovenator-baby-*","carcharodontosauridae-lajasvenator-baby-*",
+
+							"carcharodontosauridae-giganotosaurus-baby-*","carcharodontosauridae-carcharodontosaurus-baby-*","carcharodontosauridae-mapusaurus-baby-*","carcharodontosauridae-tyrannotitan-baby-*","carcharodontosauridae-tameryraptor-baby-*","carcharodontosauridae-veterupristisaurus-baby-*","carcharodontosauridae-ulughbegsaurus-baby-*","carcharodontosauridae-siamraptor-baby-*","carcharodontosauridae-shaochilong-baby-*","carcharodontosauridae-concavenator-baby-*","carcharodontosauridae-lusovenator-baby-*","carcharodontosauridae-lajasvenator-baby-*",
+
+							"abelisauridae-pycnonemosaurus-baby-*","abelisauridae-ekrixinatosaurus-baby-*","abelisauridae-carnotaurus-baby-*","abelisauridae-chenanisaurus-baby-*","abelisauridae-rajasaurus-baby-*","abelisauridae-abelisaurus-baby-*","abelisauridae-majungasaurus-baby-*","abelisauridae-skorpiovenator-baby-*","abelisauridae-xenotarsosaurus-baby-*","abelisauridae-rahiolisaurus-baby-*","abelisauridae-arcovenator-baby-*","abelisauridae-rugops-baby-*","abelisauridae-aucasaurus-baby-*","abelisauridae-dahalokely-baby-*","abelisauridae-ilokelesia-baby-*","abelisauridae-viavenator-baby-*","abelisauridae-tarascosaurus-baby-*","abelisauridae-thanos-baby-*",
+
+							"spinosauridae-spinosaurus-baby-*", "spinosauridae-oxalaia-baby-*", "spinosauridae-suchomimus-baby-*", "spinosauridae-baryonyx-baby-*", "spinosauridae-ichthyovenator-baby-*","spinosauridae-irritator-baby-*",
+
+							],
+						},
+						"priority": 1.82,
+						"mincooldown": 600,
+						"maxcooldown": 650,
+						"seekingRange": 30,
+						"movespeedByType": {
+							"*-baby-*": 0.010,
+							"*-deinocheirus-adult-*": 0.035,
+							"*-paraxenisaurus-adult-*": 0.0455,
+						},
+						"animationSpeedByType": {
+							"*": 1.5
+						},
+						"whenInEmotionState": "aggressiveondamage|aggressivearoundentities"
+					},
+                    {
+						"code": "fleeentity",
+						"animation": "Run",
+						"enabledByType": {
+							"*":true,
+						},
+						"entityCodesByType": {
+							"*-deinocheirus-adult-*":[
+								"tyrannosauridae-tyrannosaurus-adult-*","tyrannosauridae-tarbosaurus-adult-*","tyrannosauridae-nanuqsaurus-adult-*","tyrannosauridae-albertosaurus-adult-*","tyrannosauridae-gorgosaurus-adult-*","tyrannosauridae-alioramus-adult-*","tyrannosauridae-qianzhousaurus-adult-*","tyrannosauridae-zhuchengtyrannus-adult-*","tyrannosauridae-bistahieversor-adult-*","tyrannosauridae-thanatotheristes-adult-*","tyrannosauridae-teratophoneus-adult-*","tyrannosauridae-dynamoterror-adult-*",
+
+								"spinosauridae-spinosaurus-adult-*", "spinosauridae-oxalaia-adult-*", "spinosauridae-suchomimus-adult-*", "spinosauridae-baryonyx-adult-*",
+
+								"abelisauridae-pycnonemosaurus-adult-*","abelisauridae-ekrixinatosaurus-adult-*","abelisauridae-carnotaurus-adult-*","abelisauridae-chenanisaurus-adult-*","abelisauridae-rajasaurus-adult-*","abelisauridae-abelisaurus-adult-*","abelisauridae-majungasaurus-adult-*",
+
+								"carcharodontosauridae-giganotosaurus-adult-*","carcharodontosauridae-carcharodontosaurus-adult-*","carcharodontosauridae-mapusaurus-adult-*","carcharodontosauridae-tyrannotitan-adult-*","carcharodontosauridae-tameryraptor-adult-*","carcharodontosauridae-veterupristisaurus-adult-*","carcharodontosauridae-ulughbegsaurus-adult-*","carcharodontosauridae-siamraptor-adult-*","carcharodontosauridae-shaochilong-adult-*","carcharodontosauridae-concavenator-adult-*","carcharodontosauridae-lusovenator-adult-*","carcharodontosauridae-lajasvenator-adult-*",
+
+								"mosasauridae-*",
+							],
+							"*-paraxenisaurus-adult-*":[
+								"tyrannosauridae-tyrannosaurus-adult-*","tyrannosauridae-tarbosaurus-adult-*","tyrannosauridae-nanuqsaurus-adult-*","tyrannosauridae-albertosaurus-adult-*","tyrannosauridae-gorgosaurus-adult-*","tyrannosauridae-alioramus-adult-*","tyrannosauridae-qianzhousaurus-adult-*","tyrannosauridae-zhuchengtyrannus-adult-*","tyrannosauridae-bistahieversor-adult-*","tyrannosauridae-thanatotheristes-adult-*","tyrannosauridae-teratophoneus-adult-*","tyrannosauridae-dynamoterror-adult-*",
+
+								"spinosauridae-spinosaurus-adult-*", "spinosauridae-oxalaia-adult-*", "spinosauridae-suchomimus-adult-*", "spinosauridae-baryonyx-adult-*",
+
+								"abelisauridae-pycnonemosaurus-adult-*","abelisauridae-ekrixinatosaurus-adult-*","abelisauridae-carnotaurus-adult-*","abelisauridae-chenanisaurus-adult-*","abelisauridae-rajasaurus-adult-*","abelisauridae-abelisaurus-adult-*","abelisauridae-majungasaurus-adult-*",
+
+								"carcharodontosauridae-giganotosaurus-adult-*","carcharodontosauridae-carcharodontosaurus-adult-*","carcharodontosauridae-mapusaurus-adult-*","carcharodontosauridae-tyrannotitan-adult-*","carcharodontosauridae-tameryraptor-adult-*","carcharodontosauridae-veterupristisaurus-adult-*","carcharodontosauridae-ulughbegsaurus-adult-*","carcharodontosauridae-siamraptor-adult-*","carcharodontosauridae-shaochilong-adult-*","carcharodontosauridae-concavenator-adult-*","carcharodontosauridae-lusovenator-adult-*","carcharodontosauridae-lajasvenator-adult-*",
+
+								"mosasauridae-*",
+							],
+							"*":["player","bear-*","bell-*","bowtorn-*","drifter-*","shiver-*","hyena-male", "hyena-female","wolf-male", "wolf-female",
+
+							"tyrannosauridae-*","abelisauridae-*","spinosauridae-*","carcharodontosauridae-*",
+
+							"pantherinae-*", "caninae-*","felinae-*","machairodontinae-*","ursidae-*",
+							],
+						},
+						"priority": 1.8,
+						"movespeedByType": {
+							"*-baby-*": 0.010,
+							"*-deinocheirus-adult-*":0.035,
+							"*-paraxenisaurus-adult-*":0.0455,
+							"*-gallimimus-adult-*":0.0793,
+							"*-dzharacursor-adult-*":0.0817,
+							"*-garudimimus-adult-*":0.084,
+							"*-sinornithomimus-adult-*":0.0849,
+							"*-struthiomimus-adult-*":0.0849,
+							"*-ornithomimus-adult-*":0.0849,
+							"*-dromiceiomimus-adult-*":0.0863,
+							"*-kinnareemimus-adult-*":0.0863,
+							"*-tyrannomimus-adult-*":0.0863,
+							"*-harpymimus-adult-*":0.0887,
+							"*-pelecanimimus-adult-*":0.0887,
+							"*-nqwebasaurus-adult-*":0.0898,
+						},
+						"animationSpeedByType": {
+							"*-baby-*": 1.5,
+							"*-deinocheirus-adult-*":1.5,
+							"*-paraxenisaurus-adult-*":1.5,
+							"*": 2
+						},
+						"whenNotInEmotionState": "fleeondamage",
+						"seekingRange": 50
+					},
+					{
+						"code": "fleeentity",
+						"animation": "Run",
+						"entityCodesByType": {
+							"*": [ "player","bear-*","bell-*","bowtorn-*","drifter-*","shiver-*","hyena-*","locust-*", "wolf-*",
+
+							"tyrannosauridae-*", "spinosauridae-*","dromaeosauridae-*","abelisauridae-*","mosasauridae-*","carcharodontosauridae-*",
+
+							"pantherinae-*", "caninae-*","felinae-*","machairodontinae-*","ursidae-*",
+
+							]
+						},
+						"priorityByType":{ "*-adult-*":1.7,"*-baby-*":2.1,},
+						"movespeedByType": {
+							"*-baby-*": 0.010,
+							"*-deinocheirus-adult-*":0.035,
+							"*-paraxenisaurus-adult-*":0.0455,
+							"*-gallimimus-adult-*":0.0793,
+							"*-dzharacursor-adult-*":0.0817,
+							"*-garudimimus-adult-*":0.084,
+							"*-sinornithomimus-adult-*":0.0849,
+							"*-struthiomimus-adult-*":0.0849,
+							"*-ornithomimus-adult-*":0.0849,
+							"*-dromiceiomimus-adult-*":0.0863,
+							"*-kinnareemimus-adult-*":0.0863,
+							"*-tyrannomimus-adult-*":0.0863,
+							"*-harpymimus-adult-*":0.0887,
+							"*-pelecanimimus-adult-*":0.0887,
+							"*-nqwebasaurus-adult-*":0.0898,
+						},
+						"animationSpeedByType": {
+							"*-baby-*": 1.5,
+							"*-deinocheirus-adult-*":1.5,
+							"*-paraxenisaurus-adult-*":1.5,
+							"*": 2
+						},
+						"seekingRange": 60,
+						"whenInEmotionState": "fleeondamage"
+					},
+                    {
+						"code": "getoutofwater",
+						"animation": "Swim",
+						"priority": 1.4,
+						"movespeedByType": {
+							"*-baby-*": 0.004,
+							"*-adult-*": 0.008,
+
+						},
+						"animationSpeedByType": {
+							"*-baby-*": 1,
+							"*-adult-*": 1,
+						},
+					},
+                    {
+						"code": "stayclosetoentity",
+						"animation": "Run",
+						"enabledByType": {
+							"*": true
+						},
+						"priority": 1.81,
+						"entityCodeByType": {
+							"*-adult-*": "ornithomimosauria-{type}-baby-{gender}",
+							"*-baby-*": "ornithomimosauria-{type}-adult-{gender}"},
+
+						"maxDistanceByType": {"*-adult-*": 8,"*-baby-*": 5},
+						"searchRange": 45,
+						"movespeedByType": {
+							"*-baby-*": 0.010,
+							"*-deinocheirus-adult-*":0.035,
+							"*-paraxenisaurus-adult-*":0.0455,
+							"*-gallimimus-adult-*":0.0793,
+							"*-dzharacursor-adult-*":0.0817,
+							"*-garudimimus-adult-*":0.084,
+							"*-sinornithomimus-adult-*":0.0849,
+							"*-struthiomimus-adult-*":0.0849,
+							"*-ornithomimus-adult-*":0.0849,
+							"*-dromiceiomimus-adult-*":0.0863,
+							"*-kinnareemimus-adult-*":0.0863,
+							"*-tyrannomimus-adult-*":0.0863,
+							"*-harpymimus-adult-*":0.0887,
+							"*-pelecanimimus-adult-*":0.0887,
+							"*-nqwebasaurus-adult-*":0.0898,
+						},
+						"animationSpeedByType": {
+							"*-baby-*": 1.5,
+							"*-deinocheirus-adult-*":1.5,
+							"*-paraxenisaurus-adult-*":1.5,
+							"*": 2
+						},
+					},
+                    {
+						"code": "idle",
+						"animation": "Sit",
+						"priority": 1.2,
+						"minduration": 20000,
+						"maxduration": 240000,
+						"mincooldown": 6000,
+						"maxcooldown": 12000,
+						"priorityForCancel": 1.28,
+						"duringDayTimeFramesByType": {
+							"*":[{"fromHour": 22,"toHour": 24},{"fromHour": 0,"toHour": 4},{"fromHour": 12,"toHour": 16}],
+							},
+						"stopOnNearbyEntityCodes": [ "player", "bear-*","hyena-male", "hyena-female","wolf-male", "wolf-female", "tyrannosauridae-*", "spinosauridae-*","dromaeosauridae-*","abelisauridae-*","mosasauridae-*",],
+						"stopRange": 20,
+						"animationSpeedByType": {
+							"*-baby-*": 0.6,
+							"*": 0.5
+						},
+						"stopOnHurt": true,
+						"whenNotInEmotionState": "aggressiveondamage|aggressivearoundentities|fleeondamage"
+					},
+                    {
+						"code": "idle",
+						"animation": "Lie",
+						"priority": 1.18,
+						"minduration": 30000,
+						"maxduration": 240000,
+						"mincooldown": 6000,
+						"maxcooldown": 12000,
+						"priorityForCancel": 1.28,
+						"duringDayTimeFramesByType": {
+							"*":[{"fromHour": 22.5,"toHour": 24},{"fromHour": 0,"toHour": 4},{"fromHour": 12.5,"toHour": 16}],
+							},
+						"stopOnNearbyEntityCodes": [ "player", "bear-*","hyena-male", "hyena-female","wolf-male", "wolf-female", "tyrannosauridae-*", "spinosauridae-*","dromaeosauridae-*","abelisauridae-*","mosasauridae-*",],
+						"stopRange": 10,
+						"animationSpeedByType": {
+							"*-baby-*": 0.6,
+							"*": 0.5
+						},
+						"stopOnHurt": true,
+						"whenNotInEmotionState": "aggressiveondamage|aggressivearoundentities|fleeondamage"
+					},
+                    {
+						"code": "idle",
+						"animation": "Sleep",
+						"priority": 1.15,
+						"minduration": 200000,
+						"maxduration": 800000,
+						"mincooldown": 1000,
+						"maxcooldown": 3000,
+						"animationSpeed": 0.3,
+						"whenNotInEmotionState": "aggressiveondamage|aggressivearoundentities|fleeondamage",
+						"duringDayTimeFramesByType": {
+							"*":[{"fromHour": 22.75,"toHour": 24},{"fromHour": 0,"toHour": 4},{"fromHour": 12.75,"toHour": 15}],
+							},
+						"stopOnNearbyEntityCodes": [ "player" ],
+						"stopRange": 1,
+						"stopOnHurt": true
+					},
+                    {
+						"code": "seekfoodandeat",
+						"animation": "Walk",
+						"eatAnimation": "Eat",
+
+						"priority": 1.34,
+						"eatSoundByType": {
+							"*":"game:creature/animal-eat*"},
+						"eatTime": 1.5,
+						"eatLooseItems": true,
+						"movespeedByType": {
+							"*-baby-*": 0.0012,
+							"*-deinocheirus-adult-*":0.02,
+							"*-paraxenisaurus-adult-*":0.0176,
+							"*-gallimimus-adult-*":0.0168,
+							"*-dzharacursor-adult-*":0.016,
+							"*-garudimimus-adult-*":0.0152,
+							"*-sinornithomimus-adult-*":0.0149,
+							"*-struthiomimus-adult-*":0.0149,
+							"*-ornithomimus-adult-*":0.0149,
+							"*-dromiceiomimus-adult-*":0.0144,
+							"*-kinnareemimus-adult-*":0.0144,
+							"*-tyrannomimus-adult-*":0.0144,
+							"*-harpymimus-adult-*":0.0136,
+							"*-pelecanimimus-adult-*":0.0136,
+							"*-nqwebasaurus-adult-*":0.0132,
+						},
+						"animationSpeedByType": {
+							"*-baby-*": 1,
+							"*-adult-*": 1,
+						},
+						"mincooldownHours": 1,
+						"maxcooldownHours": 4,
+						"whenNotInEmotionState": "aggressiveondamage|aggressivearoundentities|fleeondamage"
+					},
+                    {
+						"code": "idle",
+						"animation": "Eat",
+						"priority": 1.2,
+						"priorityForCancel": 1.35,
+						"minduration": 2667,
+						"maxduration": 2667,
+						"mincooldown": 6000,
+						"maxcooldown": 20000,
+						"animationSpeed": 1,
+						"soundByType": {"*":"game:creature/animal-eat*"},
+						"whenNotInEmotionState": "aggressiveondamage|aggressivearoundentities|fleeondamage"
+					},
+                    {
+						"code": "idle",
+						"animation": "Roar",
+						"priority": 0.5,
+						"priorityForCancel": 1.5,
+						"minduration": 4667,
+						"maxduration": 4667,
+						"chanceByType": {"*":0.01},
+						"mincooldown": 8000,
+						"maxcooldown": 50000,
+						"animationSpeed": 0.5,
+						"soundByType": {
+							"*-adult-*": "creature/roar",
+							"*-baby-*": "creature/baby"
+						},
+						"soundRangeByType": {
+							"*-baby-*": 30,
+							"*": 60
+						},
+						"whenNotInEmotionState": "aggressiveondamage|aggressivearoundentities|fleeondamage"
+					},
+                    {
+						"code": "wander",
+						"animation": "Walk",
+						"priority": 1.0,
+						"priorityForCancel": 1.35,
+						"chance": 0.0005,
+						"duringDayTimeFramesByType": {"*-adult-*":[{"fromHour": 18,"toHour": 19},{"fromHour": 6,"toHour": 7}]},
+						"movespeedByType": {
+							"*-baby-*": 0.0012,
+							"*-deinocheirus-adult-*":0.02,
+							"*-paraxenisaurus-adult-*":0.0176,
+							"*-gallimimus-adult-*":0.0168,
+							"*-dzharacursor-adult-*":0.016,
+							"*-garudimimus-adult-*":0.0152,
+							"*-sinornithomimus-adult-*":0.0149,
+							"*-struthiomimus-adult-*":0.0149,
+							"*-ornithomimus-adult-*":0.0149,
+							"*-dromiceiomimus-adult-*":0.0144,
+							"*-kinnareemimus-adult-*":0.0144,
+							"*-tyrannomimus-adult-*":0.0144,
+							"*-harpymimus-adult-*":0.0136,
+							"*-pelecanimimus-adult-*":0.0136,
+							"*-nqwebasaurus-adult-*":0.0132,
+						},
+						"animationSpeedByType": {
+							"*-baby-*": 1,
+							"*-adult-*": 1,
+						},
+						"preferredLightLevel": 24,
+						"whenNotInEmotionState": "aggressiveondamage|aggressivearoundentities|fleeondamage"
+					},
+					{
+						"code": "stayclosetoentity",
+						"animation": "Run",
+						"priority": 2,
+						"enabledByType":{
+							"*-baby-*":false,
+							"*-adult-*":true,
+                        },
+						"entityCodeByType": {
+							"*-adult-*": "hitch"
+							},
+						"movespeedByType": {
+							"*-baby-*": 0.010,
+							"*-deinocheirus-adult-*":0.035,
+							"*-paraxenisaurus-adult-*":0.0455,
+							"*-gallimimus-adult-*":0.0793,
+							"*-dzharacursor-adult-*":0.0817,
+							"*-garudimimus-adult-*":0.084,
+							"*-sinornithomimus-adult-*":0.0849,
+							"*-struthiomimus-adult-*":0.0849,
+							"*-ornithomimus-adult-*":0.0849,
+							"*-dromiceiomimus-adult-*":0.0863,
+							"*-kinnareemimus-adult-*":0.0863,
+							"*-tyrannomimus-adult-*":0.0863,
+							"*-harpymimus-adult-*":0.0887,
+							"*-pelecanimimus-adult-*":0.0887,
+							"*-nqwebasaurus-adult-*":0.0898,
+						},
+						"animationSpeedByType": {
+							"*-baby-*": 1.5,
+							"*-deinocheirus-adult-*":1.5,
+							"*-paraxenisaurus-adult-*":1.5,
+							"*": 2
+						},
+						"maxDistance": 6,
+						"searchRange": 10,
+
+					},
+					{
+						"code": "seekentity",
+						"animation": "Run",
+						"enabledByType": {
+							"*-baby-*": false,
+							"*": true},
+						"entityCodesByType": {"*-adult-*":["hitch"],},
+						"priority": 1.1,
+						"seekingRange": 5,
+						"belowTempSeekingRange": 5,
+						"movespeedByType": {
+							"*-baby-*": 0.010,
+							"*-deinocheirus-adult-*":0.035,
+							"*-paraxenisaurus-adult-*":0.0455,
+							"*-gallimimus-adult-*":0.0793,
+							"*-dzharacursor-adult-*":0.0817,
+							"*-garudimimus-adult-*":0.084,
+							"*-sinornithomimus-adult-*":0.0849,
+							"*-struthiomimus-adult-*":0.0849,
+							"*-ornithomimus-adult-*":0.0849,
+							"*-dromiceiomimus-adult-*":0.0863,
+							"*-kinnareemimus-adult-*":0.0863,
+							"*-tyrannomimus-adult-*":0.0863,
+							"*-harpymimus-adult-*":0.0887,
+							"*-pelecanimimus-adult-*":0.0887,
+							"*-nqwebasaurus-adult-*":0.0898,
+						},
+						"animationSpeedByType": {
+							"*-baby-*": 1.5,
+							"*-deinocheirus-adult-*":1.5,
+							"*-paraxenisaurus-adult-*":1.5,
+							"*": 2
+						},
+					},
+
+
+				]
+            },
+			{"code": "pettable","minGeneration": 1},
+			{"code": "ropetieable","minGeneration": 2},
+
+        ],
+	"spawnconditions": {
+		"worldgen": {
+			"chanceByType": {"*-baby-*": 0.0},
+			"triesPerChunk": { "avg": 0.01, "var": 0},
+			"tryOnlySurface": true,
+			"insideBlockCodes": ["game:air","game:tallgrass-*","game:gravel-*","game:sand-*","game:snowlayer-1","game:soil-*"],
+			"groupSizeByType": {
+				"*-adult-male":{ "dist": "uniform","avg": 3,"var": 2},
+				"*-adult-female":{ "dist": "uniform","avg": 4,"var": 2},
+				"*":{ "dist": "uniform","avg": 0,"var": 0},
+			},
+			"companionsByType":{
+				"*-adult-male":["ornithomimosauria:ornithomimosauria-{type}-adult-male"],
+				"*-adult-female":["ornithomimosauria:ornithomimosauria-{type}-adult-female","ornithomimosauria:ornithomimosauria-{type}-adult-female","ornithomimosauria:ornithomimosauria-{type}-adult-female","ornithomimosauria:ornithomimosauria-{type}-adult-male", "ornithomimosauria:ornithomimosauria-{type}-baby-female","ornithomimosauria:ornithomimosauria-{type}-baby-male","ornithomimosauria:ornithomimosauria-{type}-baby-female","ornithomimosauria:ornithomimosauria-{type}-baby-male"],
+			},
+
+		},
+		"runtime": {
+			"group": "neutral",
+			"MinDistanceToPlayer": 100,
+			"tryOnlySurface": true,
+			"chanceByType": {"*-adult-*": 0.001,"*":0.00,},
+			"triesPerChunk": { "avg": 0.0, "var": 0},
+			"maxLightLevel": 7,
+			"lightLevelType": "onlyBlockLight",
+			"spawnCapPlayerScaling": 0.0,
+			"insideBlockCodes": ["game:air","game:tallgrass-*","game:gravel-*","game:sand-*","game:snowlayer-1","game:soil-*"],
+			"groupSizeByType": {
+				"*-adult-male":{ "dist": "uniform","avg": 3,"var": 2},
+				"*-adult-female":{ "dist": "uniform","avg": 4,"var": 2},
+				"*":{ "dist": "uniform","avg": 0,"var": 0},
+			},
+			"companionsByType":{
+				"*-adult-male":["ornithomimosauria:ornithomimosauria-{type}-adult-male"],
+				"*-adult-female":["ornithomimosauria:ornithomimosauria-{type}-adult-female","ornithomimosauria:ornithomimosauria-{type}-adult-female","ornithomimosauria:ornithomimosauria-{type}-adult-female","ornithomimosauria:ornithomimosauria-{type}-adult-male", "ornithomimosauria:ornithomimosauria-{type}-baby-female","ornithomimosauria:ornithomimosauria-{type}-baby-male","ornithomimosauria:ornithomimosauria-{type}-baby-female","ornithomimosauria:ornithomimosauria-{type}-baby-male"],
+			},
+		}
+	},
+    "spawnconditionsByType": {
+			"*-deinocheirus-adult-*": {
+				"climate": {
+					"minTemp": 12,
+					"maxTemp": 34,
+					"minRain": 0.4,
+					"maxRain": 0.9,
+					"minForestOrShrubs": 0.4,
+					"maxForest": 0.8,
+					"maxShrubs": 1,
+					"minY": 0.8,
+					"maxY": 1.4
+				},
+				"worldgen": {
+					"triesPerChunk":{ "avg": 0.001, "var": 0},
+				},
+				"runtime": {
+					"chanceByType": {"*-adult-*": 0.0001,"*":0.00,},
+					"maxQuantityByGroup": { "code": "ornithomimosauria-*", "maxQuantity": 1 },
+				},
+			},
+			"*-paraxenisaurus-adult-*": {
+						"climate": {
+							"minTemp": 20,
+							"maxTemp": 38,
+							"minRain": 0.2,
+							"maxRain": 0.5,
+							"minForestOrShrubs": 0.2,
+							"maxForest": 0.4,
+							"maxShrubs": 0.8,
+							"minY": 0.8,
+							"maxY": 1.3
+						},
+						"worldgen": {
+							"triesPerChunk":{ "avg": 0.001, "var": 0},
+						},
+						"runtime": {
+							"chanceByType": {"*-adult-*": 0.0001,"*":0.00,},
+							"maxQuantityByGroup": { "code": "ornithomimosauria-*", "maxQuantity": 1 },
+						},
+					},
+			"*-gallimimus-adult-*": {
+						"climate": {
+							"minTemp": 10,
+							"maxTemp": 35,
+							"minRain": 0.3,
+							"maxRain": 0.8,
+							"minForestOrShrubs": 0.3,
+							"maxForest": 0.7,
+							"maxShrubs": 1,
+							"minY": 0.7,
+							"maxY": 1.5
+						},
+					},
+			"*-dzharacursor-adult-*": {
+						"climate": {
+							"minTemp": 15,
+							"maxTemp": 33,
+							"minRain": 0.3,
+							"maxRain": 0.7,
+							"minForestOrShrubs": 0.3,
+							"maxForest": 0.6,
+							"maxShrubs": 1,
+							"minY": 0.8,
+							"maxY": 1.4
+						},
+					},
+			"*-garudimimus-adult-*": {
+						"climate": {
+							"minTemp": 10,
+							"maxTemp": 32,
+							"minRain": 0.3,
+							"maxRain": 0.7,
+							"minForestOrShrubs": 0.3,
+							"maxForest": 0.6,
+							"maxShrubs": 0.9,
+							"minY": 0.8,
+							"maxY": 1.4
+						},
+					},
+			"*-sinornithomimus-adult-*": {
+						"climate": {
+							"minTemp": 15,
+							"maxTemp": 35,
+							"minRain": 0.4,
+							"maxRain": 0.9,
+							"minForestOrShrubs": 0.4,
+							"maxForest": 0.9,
+							"maxShrubs": 1,
+							"minY": 0.7,
+							"maxY": 1.5
+						},
+					},
+			"*-struthiomimus-adult-*": {
+						"climate": {
+							"minTemp": 5,
+							"maxTemp": 30,
+							"minRain": 0.3,
+							"maxRain": 0.8,
+							"minForestOrShrubs": 0.3,
+							"maxForest": 0.7,
+							"maxShrubs": 0.9,
+							"minY": 0.6,
+							"maxY": 1.4
+						},
+					},
+			"*-ornithomimus-adult-*": {
+						"climate": {
+							"minTemp": 5,
+							"maxTemp": 30,
+							"minRain": 0.3,
+							"maxRain": 0.8,
+							"minForestOrShrubs": 0.3,
+							"maxForest": 0.6,
+							"maxShrubs": 0.9,
+							"minY": 0.6,
+							"maxY": 1.4
+						},
+					},
+			"*-dromiceiomimus-adult-*": {
+						"climate": {
+							"minTemp": 4,
+							"maxTemp": 28,
+							"minRain": 0.3,
+							"maxRain": 0.7,
+							"minForestOrShrubs": 0.2,
+							"maxForest": 0.5,
+							"maxShrubs": 0.8,
+							"minY": 0.6,
+							"maxY": 1.3
+						},
+					},
+			"*-kinnareemimus-adult-*": {
+						"climate": {
+							"minTemp": 22,
+							"maxTemp": 38,
+							"minRain": 0.5,
+							"maxRain": 1.0,
+							"minForestOrShrubs": 0.6,
+							"maxForest": 1,
+							"maxShrubs": 1,
+							"minY": 0.8,
+							"maxY": 1.4
+						},
+					},
+			"*-tyrannomimus-adult-*": {
+						"climate": {
+							"minTemp": 10,
+							"maxTemp": 28,
+							"minRain": 0.4,
+							"maxRain": 0.9,
+							"minForestOrShrubs": 0.5,
+							"maxForest": 1,
+							"maxShrubs": 1,
+							"minY": 0.9,
+							"maxY": 1.5
+						},
+					},
+			"*-harpymimus-adult-*": {
+						"climate": {
+							"minTemp": 15,
+							"maxTemp": 35,
+							"minRain": 0.4,
+							"maxRain": 0.9,
+							"minForestOrShrubs": 0.4,
+							"maxForest": 0.9,
+							"maxShrubs": 1,
+							"minY": 0.8,
+							"maxY": 1.5
+						},
+					},
+			"*-pelecanimimus-adult-*": {
+						"climate": {
+							"minTemp": 15,
+							"maxTemp": 32,
+							"minRain": 0.4,
+							"maxRain": 1.0,
+							"minForestOrShrubs": 0.5,
+							"maxForest": 1,
+							"maxShrubs": 1,
+							"minY": 0.8,
+							"maxY": 1.5
+						},
+					},
+			"*-nqwebasaurus-adult-*": {
+						"climate": {
+							"minTemp": 12,
+							"maxTemp": 28,
+							"minRain": 0.3,
+							"maxRain": 0.8,
+							"minForestOrShrubs": 0.3,
+							"maxForest": 0.7,
+							"maxShrubs": 1,
+							"minY": 0.7,
+							"maxY": 1.4
+						},
+					},
+			"*": {
+					"climate": {
+						"minTemp": 40,
+						"maxTemp": 40,
+						"minRain": 0,
+						"maxRain": 0,
+						"minForestOrShrubs": 0,
+						"maxForest": 0,
+						"maxShrubs": 0,
+						"minY": 0,
+						"maxY": 0
+					},
+					"worldgen": {
+						"triesPerChunk": { "avg": 0.0, "var": 0}
+					},
+					"runtime": {
+						"maxQuantityByGroup": { "code": "ornithomimosauria-*", "maxQuantity": 0 },
+						"chanceByType": {"*-baby-*": 0.0},
+					}
+				},
+		}
+    },
+
+    "soundsByType": {
+		"*-pachycephalosaurus-adult-*":{
+			"hurt": "creature/hurt",
+			"death": "creature/death",
+			"idle": "creature/idle"
+		},
+		"*":{
+			"hurt": "creature/baby",
+			"death": "creature/baby",
+			"idle": "creature/baby"
+		},
+		"idleSoundChance": 0.1
+	}
+}

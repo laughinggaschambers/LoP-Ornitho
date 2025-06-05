@@ -1,0 +1,100 @@
+﻿{
+  "code": "creature",
+  "class": "ItemCreature",
+  "maxstacksize": 64,
+  "variantgroups": [
+    {
+      "code": "type",
+      "states": [ 
+	    "ornithomimosauria-deinocheirus-adult-male","ornithomimosauria-deinocheirus-adult-female", "ornithomimosauria-deinocheirus-baby-male", "ornithomimosauria-deinocheirus-baby-female","ornithomimosauria-deinocheirus-nest-empty","ornithomimosauria-deinocheirus-nest-incubating","ornithomimosauria-deinocheirus-nest-mature",
+		"ornithomimosauria-gallimimus-adult-male","ornithomimosauria-gallimimus-adult-female", "ornithomimosauria-gallimimus-baby-male", "ornithomimosauria-gallimimus-baby-female","ornithomimosauria-gallimimus-nest-empty","ornithomimosauria-gallimimus-nest-incubating","ornithomimosauria-gallimimus-nest-mature",
+		"ornithomimosauria-garudimimus-adult-male","ornithomimosauria-garudimimus-adult-female", "ornithomimosauria-garudimimus-baby-male", "ornithomimosauria-garudimimus-baby-female","ornithomimosauria-garudimimus-nest-empty","ornithomimosauria-garudimimus-nest-incubating","ornithomimosauria-garudimimus-nest-mature",
+		"ornithomimosauria-paraxenisaurus-adult-male","ornithomimosauria-paraxenisaurus-adult-female", "ornithomimosauria-paraxenisaurus-baby-male", "ornithomimosauria-paraxenisaurus-baby-female","ornithomimosauria-paraxenisaurus-nest-empty","ornithomimosauria-paraxenisaurus-nest-incubating","ornithomimosauria-paraxenisaurus-nest-mature",
+		"ornithomimosauria-sinornithomimus-adult-male","ornithomimosauria-sinornithomimus-adult-female", "ornithomimosauria-sinornithomimus-baby-male", "ornithomimosauria-sinornithomimus-baby-female","ornithomimosauria-sinornithomimus-nest-empty","ornithomimosauria-sinornithomimus-nest-incubating","ornithomimosauria-sinornithomimus-nest-mature",
+		"ornithomimosauria-struthiomimus-adult-male","ornithomimosauria-struthiomimus-adult-female", "ornithomimosauria-struthiomimus-baby-male", "ornithomimosauria-struthiomimus-baby-female","ornithomimosauria-struthiomimus-nest-empty","ornithomimosauria-struthiomimus-nest-incubating","ornithomimosauria-struthiomimus-nest-mature",
+		"ornithomimosauria-ornithomimus-adult-male","ornithomimosauria-ornithomimus-adult-female", "ornithomimosauria-ornithomimus-baby-male", "ornithomimosauria-ornithomimus-baby-female","ornithomimosauria-ornithomimus-nest-empty","ornithomimosauria-ornithomimus-nest-incubating","ornithomimosauria-ornithomimus-nest-mature",
+		"ornithomimosauria-dromiceiomimus-adult-male","ornithomimosauria-dromiceiomimus-adult-female", "ornithomimosauria-dromiceiomimus-baby-male", "ornithomimosauria-dromiceiomimus-baby-female","ornithomimosauria-dromiceiomimus-nest-empty","ornithomimosauria-dromiceiomimus-nest-incubating","ornithomimosauria-dromiceiomimus-nest-mature",
+		"ornithomimosauria-harpymimus-adult-male","ornithomimosauria-harpymimus-adult-female", "ornithomimosauria-harpymimus-baby-male", "ornithomimosauria-harpymimus-baby-female","ornithomimosauria-harpymimus-nest-empty","ornithomimosauria-harpymimus-nest-incubating","ornithomimosauria-harpymimus-nest-mature",
+		"ornithomimosauria-pelecanimimus-adult-male","ornithomimosauria-pelecanimimus-adult-female", "ornithomimosauria-pelecanimimus-baby-male", "ornithomimosauria-pelecanimimus-baby-female","ornithomimosauria-pelecanimimus-nest-empty","ornithomimosauria-pelecanimimus-nest-incubating","ornithomimosauria-pelecanimimus-nest-mature",
+		"ornithomimosauria-kinnareemimus-adult-male","ornithomimosauria-kinnareemimus-adult-female", "ornithomimosauria-kinnareemimus-baby-male", "ornithomimosauria-kinnareemimus-baby-female","ornithomimosauria-kinnareemimus-nest-empty","ornithomimosauria-kinnareemimus-nest-incubating","ornithomimosauria-kinnareemimus-nest-mature",
+		"ornithomimosauria-nqwebasaurus-adult-male","ornithomimosauria-nqwebasaurus-adult-female", "ornithomimosauria-nqwebasaurus-baby-male", "ornithomimosauria-nqwebasaurus-baby-female","ornithomimosauria-nqwebasaurus-nest-empty","ornithomimosauria-nqwebasaurus-nest-incubating","ornithomimosauria-nqwebasaurus-nest-mature",
+		"ornithomimosauria-tyrannomimus-adult-male","ornithomimosauria-tyrannomimus-adult-female", "ornithomimosauria-tyrannomimus-baby-male", "ornithomimosauria-tyrannomimus-baby-female","ornithomimosauria-tyrannomimus-nest-empty","ornithomimosauria-tyrannomimus-nest-incubating","ornithomimosauria-tyrannomimus-nest-mature",
+		"ornithomimosauria-dzharacursor-adult-male","ornithomimosauria-dzharacursor-adult-female", "ornithomimosauria-dzharacursor-baby-male", "ornithomimosauria-dzharacursor-baby-female","ornithomimosauria-dzharacursor-nest-empty","ornithomimosauria-dzharacursor-nest-incubating","ornithomimosauria-dzharacursor-nest-mature",
+
+
+	  ]
+    }
+  ],
+  "shapeByType": {
+	"*-deinocheirus-adult-*": {"base": "entity/land/ornithomimosauria/deinocheirus/adult"}, "*-deinocheirus-baby-*": {"base": "entity/land/ornithomimosauria/deinocheirus/baby"},
+	"*-gallimimus-adult-*": {"base": "entity/land/ornithomimosauria/gallimimus/adult"}, "*-gallimimus-baby-*": {"base": "entity/land/ornithomimosauria/gallimimus/baby"},
+	"*-garudimimus-adult-*": {"base": "entity/land/ornithomimosauria/garudimimus/adult"}, "*-garudimimus-baby-*": {"base": "entity/land/ornithomimosauria/garudimimus/baby"},
+	"*-paraxenisaurus-adult-*": {"base": "entity/land/ornithomimosauria/paraxenisaurus/adult"}, "*-paraxenisaurus-baby-*": {"base": "entity/land/ornithomimosauria/paraxenisaurus/baby"},
+	"*-sinornithomimus-adult-*": {"base": "entity/land/ornithomimosauria/sinornithomimus/adult"}, "*-sinornithomimus-baby-*": {"base": "entity/land/ornithomimosauria/sinornithomimus/baby"},
+	"*-struthiomimus-adult-*": {"base": "entity/land/ornithomimosauria/struthiomimus/adult"}, "*-struthiomimus-baby-*": {"base": "entity/land/ornithomimosauria/struthiomimus/baby"},
+	"*-ornithomimus-adult-*": {"base": "entity/land/ornithomimosauria/ornithomimus/adult"}, "*-ornithomimus-baby-*": {"base": "entity/land/ornithomimosauria/ornithomimus/baby"},
+	"*-dromiceiomimus-adult-*": {"base": "entity/land/ornithomimosauria/dromiceiomimus/adult"}, "*-dromiceiomimus-baby-*": {"base": "entity/land/ornithomimosauria/dromiceiomimus/baby"},
+	"*-harpymimus-adult-*": {"base": "entity/land/ornithomimosauria/harpymimus/adult"}, "*-harpymimus-baby-*": {"base": "entity/land/ornithomimosauria/harpymimus/baby"},
+	"*-pelecanimimus-adult-*": {"base": "entity/land/ornithomimosauria/pelecanimimus/adult"}, "*-pelecanimimus-baby-*": {"base": "entity/land/ornithomimosauria/pelecanimimus/baby"},
+	"*-kinnareemimus-adult-*": {"base": "entity/land/ornithomimosauria/kinnareemimus/adult"}, "*-kinnareemimus-baby-*": {"base": "entity/land/ornithomimosauria/kinnareemimus/baby"},
+	"*-nqwebasaurus-adult-*": {"base": "entity/land/ornithomimosauria/nqwebasaurus/adult"}, "*-nqwebasaurus-baby-*": {"base": "entity/land/ornithomimosauria/nqwebasaurus/baby"},
+	"*-tyrannomimus-adult-*": {"base": "entity/land/ornithomimosauria/tyrannomimus/adult"}, "*-tyrannomimus-baby-*": {"base": "entity/land/ornithomimosauria/tyrannomimus/baby"},
+	"*-dzharacursor-adult-*": {"base": "entity/land/ornithomimosauria/dzharacursor/adult"}, "*-dzharacursor-baby-*": {"base": "entity/land/ornithomimosauria/dzharacursor/baby"},
+	"*-nest-*":{"base": "entity/land/nest"}, "*-nest-empty":{"base": "entity/land/nest-empty"},
+  },
+  "textureByType": {
+	"*-deinocheirus-adult-*":{"base": "entity/deinocheirus-adult"},"*-deinocheirus-baby-*":{"base": "entity/deinocheirus-adult"},
+    "*-gallimimus-adult-*":{"base": "entity/gallimimus-adult"},"*-gallimimus-baby-*":{"base": "entity/gallimimus-adult"},
+    "*-garudimimus-adult-*":{"base": "entity/garudimimus-adult"},"*-garudimimus-baby-*":{"base": "entity/garudimimus-adult"},
+    "*-paraxenisaurus-adult-*":{"base": "entity/paraxenisaurus-adult"},"*-paraxenisaurus-baby-*":{"base": "entity/paraxenisaurus-adult"},
+    "*-sinornithomimus-adult-*":{"base": "entity/sinornithomimus-adult"},"*-sinornithomimus-baby-*":{"base": "entity/sinornithomimus-adult"},
+    "*-struthiomimus-adult-*":{"base": "entity/struthiomimus-adult"},"*-struthiomimus-baby-*":{"base": "entity/struthiomimus-adult"},
+    "*-ornithomimus-adult-*":{"base": "entity/ornithomimus-adult"},"*-ornithomimus-baby-*":{"base": "entity/ornithomimus-adult"},
+    "*-dromiceiomimus-adult-*":{"base": "entity/dromiceiomimus-adult"},"*-dromiceiomimus-baby-*":{"base": "entity/dromiceiomimus-adult"},
+    "*-harpymimus-adult-*":{"base": "entity/harpymimus-adult"},"*-harpymimus-baby-*":{"base": "entity/harpymimus-adult"},
+    "*-pelecanimimus-adult-*":{"base": "entity/pelecanimimus-adult"},"*-pelecanimimus-baby-*":{"base": "entity/pelecanimimus-adult"},
+    "*-kinnareemimus-adult-*":{"base": "entity/kinnareemimus-adult"},"*-kinnareemimus-baby-*":{"base": "entity/kinnareemimus-adult"},
+    "*-nqwebasaurus-adult-*":{"base": "entity/nqwebasaurus-adult"},"*-nqwebasaurus-baby-*":{"base": "entity/nqwebasaurus-adult"},
+    "*-tyrannomimus-adult-*":{"base": "entity/tyrannomimus-adult"},"*-tyrannomimus-baby-*":{"base": "entity/tyrannomimus-adult"},
+    "*-dzharacursor-adult-*":{"base": "entity/dzharacursor-adult"},"*-dzharacursor-baby-*":{"base": "entity/dzharacursor-adult"},
+ },
+  "creativeinventory": { "general": ["*"], "items": ["*"], "creatures": ["*"] },
+	"materialDensity": 600,
+	"guiTransformByType": {
+		"*-baby-*": {
+			"rotate": true,
+			"translation": { "x": -20, "y": -15, "z": 0 },
+			"rotation": { "x": -11, "y": -52, "z": -180 },
+			"origin": { "x": 1.5, "y": 1.5, "z": 1.5 },
+			"scale": 0.7
+		},
+		"creature-ornithomimosauria-*": {
+			"rotate": true,
+			"translation": { "x": -25, "y": -5, "z": -5 },
+			"rotation": { "x": -11, "y": -52, "z": -180 },
+			"origin": { "x": 1.5, "y": 1.5, "z": 1.5 },
+			"scale": 0.5
+		},
+	},
+
+	"tpHandTransformByType": {
+		"*-baby-*": {
+			"translation": { "x": -0.3, "y": -0.4, "z": -0.4 },
+			"rotation": { "x": 13, "y": -166, "z": 75 },
+			"origin": { "x": 0, "y": 0, "z": 0 },
+			"scale": 0.25
+		},
+		"creature-ornithomimosauria-*": {
+			"translation": { "x": -2, "y": -2.7, "z": -1.7 },
+			"rotation": { "x": 2, "y": -180, "z": 23 },
+			"scale": 0.2
+		},
+	},
+
+	"fpHandTransformByType": {
+		"creature-ornithomimosauria-*": {
+			"translation": { "x": 0.2, "y": 0, "z": 0 },
+			"rotation": { "x": -8, "y": -63, "z": -7 }
+		}
+	}
+}

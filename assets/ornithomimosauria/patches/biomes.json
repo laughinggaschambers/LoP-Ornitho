@@ -1,0 +1,212 @@
+[
+  {
+    "file": "therizinosauridae:entities/land/therizinosauridae.json",
+    "op": "addmerge",
+    "path": "/attributesByType",
+    "side": "Server",
+    "value": {
+      "*-deinocheirus-*": {
+        "biorealm": [
+          "eastern palearctic",
+        ]
+      },
+
+      "*-gallimimus-*": {
+        "biorealm": [
+          "central palearctic",
+          "eastern palearctic",
+        ]
+      },
+
+      "*-garudimimus-*": {
+        "biorealm": [
+          "eastern palearctic",
+        ]
+      },
+
+      "*-paraxenisaurus-*": {
+        "biorealm": [
+          "pacific nearctic",
+          "atlantic nearctic",
+        ]
+      },
+
+      "*-sinornithomimus-*": {
+        "biorealm": [
+          "eastern palearctic",
+        ]
+      },
+
+      "*-struthiomimus-*": {
+        "biorealm": [
+          "pacific nearctic",
+          "atlantic nearctic",
+        ]
+      },
+
+      "*-ornithomimus-*": {
+        "biorealm": [
+          "pacific nearctic",
+          "atlantic nearctic",
+        ]
+      },
+
+      "*-dromiceiomimus-*": {
+        "biorealm": [
+          "pacific nearctic",
+          "atlantic nearctic",
+        ]
+      },
+
+      "*-harpymimus-*": {
+        "biorealm": [
+          "eastern palearctic",
+        ]
+      },
+
+      "*-pelecanimimus-*": {
+        "biorealm": [
+          "atlantic palearctic",
+        ]
+      },
+
+      "*-kinnareemimus-*": {
+        "biorealm": [
+          "eastern palearctic",
+        ]
+      },
+
+      "*-nqwebasaurus-*": {
+        "biorealm": [
+          "atlantic afrotropic",
+          "eastern afrotropic",
+        ]
+      },
+
+      "*-tyrannomimus-*": {
+        "biorealm": [
+          "pacific palearctic",
+        ]
+      },
+
+      "*-dzharacursor-*": {
+        "biorealm": [
+          "central palearctic",
+        ]
+      },
+
+
+
+    },
+    "dependsOn": [
+      {
+        "modid": "biomes"
+      }
+    ]
+  },
+  {
+    "file": "therizinosauridae:entities/land/nest.json",
+    "op": "addmerge",
+    "path": "/attributesByType",
+    "side": "Server",
+    "value": {
+      "*-deinocheirus-*": {
+        "biorealm": [
+          "eastern palearctic",
+        ]
+      },
+
+      "*-gallimimus-*": {
+        "biorealm": [
+          "central palearctic",
+          "eastern palearctic",
+        ]
+      },
+
+      "*-garudimimus-*": {
+        "biorealm": [
+          "eastern palearctic",
+        ]
+      },
+
+      "*-paraxenisaurus-*": {
+        "biorealm": [
+          "pacific nearctic",
+          "atlantic nearctic",
+        ]
+      },
+
+      "*-sinornithomimus-*": {
+        "biorealm": [
+          "eastern palearctic",
+        ]
+      },
+
+      "*-struthiomimus-*": {
+        "biorealm": [
+          "pacific nearctic",
+          "atlantic nearctic",
+        ]
+      },
+
+      "*-ornithomimus-*": {
+        "biorealm": [
+          "pacific nearctic",
+          "atlantic nearctic",
+        ]
+      },
+
+      "*-dromiceiomimus-*": {
+        "biorealm": [
+          "pacific nearctic",
+          "atlantic nearctic",
+        ]
+      },
+
+      "*-harpymimus-*": {
+        "biorealm": [
+          "eastern palearctic",
+        ]
+      },
+
+      "*-pelecanimimus-*": {
+        "biorealm": [
+          "atlantic palearctic",
+        ]
+      },
+
+      "*-kinnareemimus-*": {
+        "biorealm": [
+          "eastern palearctic",
+        ]
+      },
+
+      "*-nqwebasaurus-*": {
+        "biorealm": [
+          "atlantic afrotropic",
+          "eastern afrotropic",
+        ]
+      },
+
+      "*-tyrannomimus-*": {
+        "biorealm": [
+          "pacific palearctic",
+        ]
+      },
+
+      "*-dzharacursor-*": {
+        "biorealm": [
+          "central palearctic",
+        ]
+      },
+
+
+
+    },
+    "dependsOn": [
+      {
+        "modid": "biomes"
+      }
+    ]
+  },
+]
