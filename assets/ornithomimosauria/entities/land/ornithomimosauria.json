@@ -374,6 +374,9 @@
 		},
 
         "behaviors": [
+			{"code": "ownable", "enabledByType": {  "*-baby-*": false,"*-deinocheirus-*": true,"*-paraxenisaurus-*": true,"*-gallimimus-*": true,"*-dzharacursor-*": true,"*": false},"minGeneration": 3 },
+			{"code": "selectionboxes", "enabledByType": {  "*-baby-*": false,"*-deinocheirus-*": true,"*-paraxenisaurus-*": true,"*-gallimimus-*": true,"*-dzharacursor-*": true,"*": false},"minGeneration": 3 },
+			{"code": "rideableaccessories", "enabledByType": {  "*-baby-*": false,"*-deinocheirus-*": true,"*-paraxenisaurus-*": true,"*-gallimimus-*": true,"*-dzharacursor-*": true,"*": false},"minGeneration": 3 },
 			{"code": "rideable", "enabledByType": {  "*-baby-*": false,"*-deinocheirus-*": true,"*-paraxenisaurus-*": true,"*-gallimimus-*": true,"*-dzharacursor-*": true,"*": false},"minGeneration": 3 },
             {"code": "repulseagents" },
 			{"code": "controlledphysics","stepHeight": 1.1251},
@@ -383,9 +386,9 @@
 			{"code": "multiply", "enabledByType": { "*-adult-female": true, "*": false } },
 			{"code": "despawn","minPlayerDistance": 8,"belowLightLevel": 8,"minSeconds": 300},
 			{"code": "ropetieable","minGeneration": 2},
-			{"code": "selectionboxes", "enabledByType": {  "*-baby-*": false,"*-deinocheirus-*": true,"*-paraxenisaurus-*": true,"*-gallimimus-*": true,"*-dzharacursor-*": true,"*": false},"minGeneration": 3 },
-			{"code": "ownable", "enabledByType": {  "*-baby-*": false,"*-deinocheirus-*": true,"*-paraxenisaurus-*": true,"*-gallimimus-*": true,"*-dzharacursor-*": true,"*": false},"minGeneration": 3 },
-			{"code": "rideableaccessories", "enabledByType": {  "*-baby-*": false,"*-deinocheirus-*": true,"*-paraxenisaurus-*": true,"*-gallimimus-*": true,"*-dzharacursor-*": true,"*": false},"minGeneration": 3 },
+
+
+
         ],
         "animations": [
 			{"code": "attack","animation": "Attack","animationSpeed": 1.2,"weight": 10,"blendMode": "AddAverage"},
@@ -407,10 +410,10 @@
     "server": {
 		"attributes": {"pathfinder": {"minTurnAnglePerSec": 60,"maxTurnAnglePerSec": 120}},
         "behaviors": [
-			{"code": "rideable", "enabledByType": {  "*-baby-*": false,"*-deinocheirus-*": true,"*-paraxenisaurus-*": true,"*-gallimimus-*": true,"*-dzharacursor-*": true,"*": false},"minGeneration": 3 },
-			{"code": "selectionboxes", "enabledByType": {  "*-baby-*": false,"*-deinocheirus-*": true,"*-paraxenisaurus-*": true,"*-gallimimus-*": true,"*-dzharacursor-*": true,"*": false},"minGeneration": 3 },
 			{"code": "ownable", "enabledByType": {  "*-baby-*": false,"*-deinocheirus-*": true,"*-paraxenisaurus-*": true,"*-gallimimus-*": true,"*-dzharacursor-*": true,"*": false},"minGeneration": 3 },
+			{"code": "selectionboxes", "enabledByType": {  "*-baby-*": false,"*-deinocheirus-*": true,"*-paraxenisaurus-*": true,"*-gallimimus-*": true,"*-dzharacursor-*": true,"*": false},"minGeneration": 3 },
 			{"code": "rideableaccessories", "enabledByType": {  "*-baby-*": false,"*-deinocheirus-*": true,"*-paraxenisaurus-*": true,"*-gallimimus-*": true,"*-dzharacursor-*": true,"*": false},"minGeneration": 3 },
+			{"code": "rideable", "enabledByType": {  "*-baby-*": false,"*-deinocheirus-*": true,"*-paraxenisaurus-*": true,"*-gallimimus-*": true,"*-dzharacursor-*": true,"*": false},"minGeneration": 3 },
             {"code": "repulseagents" },
             {"code": "controlledphysics","stepHeight": 1.1251},
             {"code": "despawn","minPlayerDistance": 8,"belowLightLevel": 8,"minSeconds": 300},
@@ -1129,7 +1132,7 @@
 	"spawnconditions": {
 		"worldgen": {
 			"chanceByType": {"*-baby-*": 0.0},
-			"triesPerChunk": { "avg": 0.01, "var": 0},
+			"triesPerChunk": { "avg": 0.007, "var": 0},
 			"tryOnlySurface": true,
 			"insideBlockCodes": ["game:air","game:tallgrass-*","game:gravel-*","game:sand-*","game:snowlayer-1","game:soil-*"],
 			"groupSizeByType": {
@@ -1147,7 +1150,7 @@
 			"group": "neutral",
 			"MinDistanceToPlayer": 100,
 			"tryOnlySurface": true,
-			"chanceByType": {"*-adult-*": 0.001,"*":0.00,},
+			"chanceByType": {"*-adult-*": 0.0007,"*":0.00,},
 			"triesPerChunk": { "avg": 0.0, "var": 0},
 			"maxLightLevel": 7,
 			"lightLevelType": "onlyBlockLight",

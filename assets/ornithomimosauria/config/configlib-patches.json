@@ -148,14 +148,14 @@
     },
     "boolean":{
       "ornithomimosauria:entities/land/ornithomimosauria.json": {
-        "/server/behaviors/0/enabledByType/*-deinocheirus-*": "ridable",
-        "/server/behaviors/0/enabledByType/*-paraxenisaurus-*": "ridable",
-        "/server/behaviors/0/enabledByType/*-gallimimus-*": "ridable",
-        "/server/behaviors/0/enabledByType/*-dzharacursor-*": "ridable",
-        "/client/behaviors/0/enabledByType/*-deinocheirus-*": "ridable",
-        "/client/behaviors/0/enabledByType/*-paraxenisaurus-*": "ridable",
-        "/client/behaviors/0/enabledByType/*-gallimimus-*": "ridable",
-        "/client/behaviors/0/enabledByType/*-dzharacursor-*": "ridable",
+        "/server/behaviors/3/enabledByType/*-deinocheirus-*": "ridable",
+        "/server/behaviors/3/enabledByType/*-paraxenisaurus-*": "ridable",
+        "/server/behaviors/3/enabledByType/*-gallimimus-*": "ridable",
+        "/server/behaviors/3/enabledByType/*-dzharacursor-*": "ridable",
+        "/client/behaviors/3/enabledByType/*-deinocheirus-*": "ridable",
+        "/client/behaviors/3/enabledByType/*-paraxenisaurus-*": "ridable",
+        "/client/behaviors/3/enabledByType/*-gallimimus-*": "ridable",
+        "/client/behaviors/3/enabledByType/*-dzharacursor-*": "ridable",
         }
     }
   },
