@@ -1132,12 +1132,12 @@
 	"spawnconditions": {
 		"worldgen": {
 			"chanceByType": {"*-baby-*": 0.0},
-			"triesPerChunk": { "avg": 0.007, "var": 0},
+			"triesPerChunk": { "avg": 0.003, "var": 0},
 			"tryOnlySurface": true,
 			"insideBlockCodes": ["game:air","game:tallgrass-*","game:gravel-*","game:sand-*","game:snowlayer-1","game:soil-*"],
 			"groupSizeByType": {
 				"*-adult-male":{ "dist": "uniform","avg": 3,"var": 2},
-				"*-adult-female":{ "dist": "uniform","avg": 4,"var": 2},
+				"*-adult-female":{ "dist": "uniform","avg": 3,"var": 2},
 				"*":{ "dist": "uniform","avg": 0,"var": 0},
 			},
 			"companionsByType":{
@@ -1150,7 +1150,7 @@
 			"group": "neutral",
 			"MinDistanceToPlayer": 100,
 			"tryOnlySurface": true,
-			"chanceByType": {"*-adult-*": 0.0007,"*":0.00,},
+			"chanceByType": {"*-adult-*": 0.0005,"*":0.00,},
 			"triesPerChunk": { "avg": 0.0, "var": 0},
 			"maxLightLevel": 7,
 			"lightLevelType": "onlyBlockLight",
@@ -1158,7 +1158,7 @@
 			"insideBlockCodes": ["game:air","game:tallgrass-*","game:gravel-*","game:sand-*","game:snowlayer-1","game:soil-*"],
 			"groupSizeByType": {
 				"*-adult-male":{ "dist": "uniform","avg": 3,"var": 2},
-				"*-adult-female":{ "dist": "uniform","avg": 4,"var": 2},
+				"*-adult-female":{ "dist": "uniform","avg": 3,"var": 2},
 				"*":{ "dist": "uniform","avg": 0,"var": 0},
 			},
 			"companionsByType":{

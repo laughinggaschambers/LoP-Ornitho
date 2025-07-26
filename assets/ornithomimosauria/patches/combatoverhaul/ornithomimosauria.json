@@ -9,7 +9,7 @@
       "code": "CombatOverhaul:EntityColliders",
       "elements": {
         "Torso": ["Neck","Neck2","Neck3", "Torso", "Body","BodyFT","BodyFT2","BodyFT3","BodyFB2", "Body Back", "Tail", "Tail2","Tail3"],
-        "Head": ["Head","Head2","Head3","Head4","Head5","Head6","Head8","Head9","Head11","Head12"],
+        "Head": ["Head","Head2","Head3","Head4","Head6","Head8","Head9","Head11","Head12"],
         "Arm": ["ArmR","ArmL","ArmR2","ArmL2"],
         "Leg": ["LegL","LegR","LegL2","LegR2","LegL3","LegR3"],
         "Critical": ["EyeL", "EyeR","Heart","Brain","Lungs"],
@@ -27,7 +27,7 @@
       "code": "CombatOverhaul:EntityColliders",
       "elements": {
         "Torso": ["Neck","Neck2","Neck3", "Torso", "Body","BodyFT","BodyFT2","BodyFT3","BodyFB2", "Body Back", "Tail", "Tail2","Tail3"],
-        "Head": ["Head","Head2","Head3","Head4","Head5","Head6","Head8","Head9","Head11","Head12"],
+        "Head": ["Head","Head2","Head3","Head4","Head6","Head8","Head9","Head11","Head12"],
         "Arm": ["ArmR","ArmL","ArmR2","ArmL2"],
         "Leg": ["LegL","LegR","LegL2","LegR2","LegL3","LegR3"],
         "Critical": ["EyeL", "EyeR","Heart","Brain","Lungs"],
