@@ -1132,7 +1132,7 @@
 	"spawnconditions": {
 		"worldgen": {
 			"chanceByType": {"*-baby-*": 0.0},
-			"triesPerChunk": { "avg": 0.003, "var": 0},
+			"triesPerChunk": { "avg": 0.001, "var": 0},
 			"tryOnlySurface": true,
 			"insideBlockCodes": ["game:air","game:tallgrass-*","game:gravel-*","game:sand-*","game:snowlayer-1","game:soil-*"],
 			"groupSizeByType": {
@@ -1150,7 +1150,7 @@
 			"group": "neutral",
 			"MinDistanceToPlayer": 100,
 			"tryOnlySurface": true,
-			"chanceByType": {"*-adult-*": 0.0005,"*":0.00,},
+			"chanceByType": {"*-adult-*": 0.00002,"*":0.00,},
 			"triesPerChunk": { "avg": 0.0, "var": 0},
 			"maxLightLevel": 7,
 			"lightLevelType": "onlyBlockLight",
